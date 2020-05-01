@@ -208,6 +208,7 @@
 
     function myFunction() {
         var x = document.getElementById("myInput").value;
+        var x = x.toLowerCase();
         if (x == "{{ myObject.answers[0] }}") {
             document.getElementById("q1").value = x;
             document.getElementById("q1").style.borderColor = "green";
