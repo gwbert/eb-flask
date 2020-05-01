@@ -1,0 +1,204 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+
+
+<style>
+  #quizbox {
+      border: solid;
+      border-width: 1px;
+  } 
+  .jumbotron {
+    background-image: url("https://farm8.staticflickr.com/7421/13787234775_0aeb271d27_b.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 250px;
+    border: black;
+    border: 5px;
+  }
+  img {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+  }
+</style>
+
+
+<div class="jumbotron p-4 p-md-5 text-white text-center rounded bg-dark">
+<h1 class="display-4 font-italic">Picture quiz:</h1>
+<h1 class="display-4 font-italic">{{ myObject.headline }}</h1>
+
+</div>
+</div>
+<div class="container text-center">
+<p class="lead my-3">{{ myObject.byline }}</p>
+</div>
+
+
+<div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img src="{{ myObject.questions[0] }}" width="350" height="225"></svg>
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <label for="answer" class="col-form-label font-weight-bold">Answer:</label>
+                    <input type="text" class="form-control" id="q1">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img src="{{ myObject.questions[1] }}" width="350" height="225"></svg>
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <label for="answer" class="col-form-label font-weight-bold">Answer:</label>
+                    <input type="text" class="form-control" id="q2">                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img src="{{ myObject.questions[2] }}" width="350" height="225"></svg>
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <label for="answer" class="col-form-label font-weight-bold">Answer:</label>
+                    <input type="text" class="form-control" id="q3">                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img src="{{ myObject.questions[3] }}" width="350" height="225"></svg>
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <label for="answer" class="col-form-label font-weight-bold">Answer:</label>
+                    <input type="text" class="form-control" id="q4">                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img src="{{ myObject.questions[4] }}" width="350" height="225">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <label for="answer" class="col-form-label font-weight-bold">Answer:</label>
+                    <input type="text" class="form-control" id="q5">                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img src="{{ myObject.questions[5] }}" width="350" height="225"></svg>
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <label for="answer" class="col-form-label font-weight-bold">Answer:</label>
+                    <input type="text" class="form-control" id="q6">                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+        <button class="btn btn-primary" type="submit" onclick="myFunction()">Submit</button>
+        <button class="btn btn-secondary" type="submit" onclick="revealFunction()">Reveal</button>
+        <hr>
+        <p id="reveal"></p>
+        <p id="score"></p>
+      </div>
+
+
+  <script>
+
+    function myFunction() {
+    var input1 = document.getElementById("q1").value;
+    var input2 = document.getElementById("q2").value; 
+    var input3 = document.getElementById("q3").value; 
+    var input4 = document.getElementById("q4").value; 
+    var input5 = document.getElementById("q5").value;
+    var input6 = document.getElementById("q6").value;
+    var answer1 = "{{ myObject.answers[0] }}";
+    var answer2 = "{{ myObject.answers[1] }}";
+    var answer3 = "{{ myObject.answers[2] }}";
+    var answer4 = "{{ myObject.answers[3] }}";
+    var answer5 = "{{ myObject.answers[4] }}";
+    var answer6 = "{{ myObject.answers[5] }}";
+    var counter = 0;
+    if (input1.toLowerCase() === answer1) {
+        counter ++;
+        document.getElementById("q1").style.borderColor = "green";
+    } else {
+        document.getElementById("q1").style.borderColor = "red";
+    }
+    if (input2.toLowerCase() === answer2) {
+        counter ++;
+        document.getElementById("q2").style.borderColor = "green";
+    } else {
+        document.getElementById("q2").style.borderColor = "red";
+    }
+    if (input3.toLowerCase() === answer3) {
+        counter ++;
+        document.getElementById("q3").style.borderColor = "green";
+    } else {
+        document.getElementById("q3").style.borderColor = "red";
+    }
+    if (input4.toLowerCase() === answer4) {
+        counter ++;
+        document.getElementById("q4").style.borderColor = "green";
+    } else {
+        document.getElementById("q4").style.borderColor = "red";
+    }
+    if (input5.toLowerCase() === answer5) {
+        counter ++;
+        document.getElementById("q5").style.borderColor = "green";
+    } else {
+        document.getElementById("q5").style.borderColor = "red";
+    }
+    if (input6.toLowerCase() === answer6) {
+        counter ++;
+        document.getElementById("q6").style.borderColor = "green";
+    } else {
+        document.getElementById("q6").style.borderColor = "red";
+    }
+    document.getElementById("score").innerHTML = "You scored " + counter + " out of 6!";
+}
+
+function revealFunction() {
+var reveal1 = document.getElementById("q1");
+reveal1.value = "{{ myObject.answers[0] }}";
+var reveal2 = document.getElementById("q2");
+reveal2.value = "{{ myObject.answers[1] }}";
+var reveal3 = document.getElementById("q3");
+reveal3.value = "{{ myObject.answers[2] }}";
+var reveal4 = document.getElementById("q4");
+reveal4.value = "{{ myObject.answers[3] }}";
+var reveal5 = document.getElementById("q5");
+reveal5.value = "{{ myObject.answers[4] }}";
+var reveal6 = document.getElementById("q6");
+reveal6.value = "{{ myObject.answers[5] }}";
+}
+
+</script>
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+{% endblock %}

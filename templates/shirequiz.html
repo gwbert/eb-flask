@@ -1,0 +1,441 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+
+
+<style>
+  #quizbox {
+      border: solid;
+      border-width: 1px;
+  } 
+  .jumbotron {
+    background-image: url("https://farm8.staticflickr.com/7421/13787234775_0aeb271d27_b.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 250px;
+    border: black;
+    border: 5px;
+  }
+</style>
+
+
+<div class="jumbotron p-4 p-md-5 text-white text-center rounded bg-dark">
+<h1 class="display-4 font-italic">Quiz:</h1>
+<h1 class="display-4 font-italic">{{ myObject.headline }}</h1>
+
+</div>
+</div>
+<div class="container text-center">
+<p class="lead my-3">{{ myObject.byline }}</p>
+</div>
+
+<div class="container">
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Answers:</span>
+    </div>
+    <input type="text" id="myInput" oninput="myFunction()" class="form-control" placeholder="Enter your answers here" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+</div>
+<hr>
+
+<div class="container" id="quizbox">
+
+  <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" id="q1">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" id="q2">
+        </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col">
+        <input type="text" class="form-control" id="q3">
+    </div>
+    <div class="col">
+        <input type="text" class="form-control" id="q4">
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col">
+        <input type="text" class="form-control" id="q5">
+    </div>
+    <div class="col">
+        <input type="text" class="form-control" id="q6">
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col">
+        <input type="text" class="form-control" id="q7">
+    </div>
+    <div class="col">
+        <input type="text" class="form-control" id="q8">
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col">
+        <input type="text" class="form-control" id="q9">
+    </div>
+    <div class="col">
+        <input type="text" class="form-control" id="q10">
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col">
+        <input type="text" class="form-control" id="q11">
+    </div>
+    <div class="col">
+        <input type="text" class="form-control" id="q12">
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col">
+        <input type="text" class="form-control" id="q13">
+    </div>
+    <div class="col">
+        <input type="text" class="form-control" id="q14">
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col">
+        <input type="text" class="form-control" id="q15">
+    </div>
+    <div class="col">
+        <input type="text" class="form-control" id="q16">
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col">
+        <input type="text" class="form-control" id="q17">
+    </div>
+    <div class="col">
+        <input type="text" class="form-control" id="q18">
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col">
+        <input type="text" class="form-control" id="q19">
+    </div>
+    <div class="col">
+        <input type="text" class="form-control" id="q20">
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col">
+        <input type="text" class="form-control" id="q21">
+    </div>
+    <div class="col">
+        <input type="text" class="form-control" id="q22">
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col">
+        <input type="text" class="form-control" id="q23">
+    </div>
+    <div class="col">
+        <input type="text" class="form-control" id="q24">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <input type="text" class="form-control" id="q25">
+    </div>
+    <div class="col">
+        <input type="text" class="form-control" id="q26">
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <input type="text" class="form-control" id="q27">
+    </div>
+    <div class="col">
+        <input type="text" class="form-control" id="q28">
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <input type="text" class="form-control" id="q29">
+    </div>
+    <div class="col">
+        <input type="text" class="form-control" id="q30">
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <input type="text" class="form-control" id="q31">
+    </div>
+    <div class="col">
+        <input type="text" class="form-control" id="q32">
+    </div>
+</div>
+
+
+<button class="btn btn-secondary" type="submit" onclick="revealFunction()">Reveal</button>
+
+<hr>
+
+<p id="reveal"></p>
+<p id="score"></p>
+
+</div>
+
+<script>
+
+    function myFunction() {
+        var x = document.getElementById("myInput").value;
+        if (x == "{{ myObject.answers[0] }}") {
+            document.getElementById("q1").value = x;
+            document.getElementById("q1").style.borderColor = "green";
+            document.getElementById("myInput").value = "";
+        }
+        if (x == "{{ myObject.answers[1] }}") {
+            document.getElementById("q2").value = x;
+            document.getElementById("q2").style.borderColor = "green";
+            document.getElementById("myInput").value = "";
+        }
+        if (x == "{{ myObject.answers[2] }}") {
+            document.getElementById("q3").value = x;
+            document.getElementById("q3").style.borderColor = "green";
+            document.getElementById("myInput").value = "";
+        }
+        if (x == "{{ myObject.answers[3] }}") {
+            document.getElementById("q4").value = x;
+            document.getElementById("q4").style.borderColor = "green";
+            document.getElementById("myInput").value = "";
+        }
+        if (x == "{{ myObject.answers[4] }}") {
+            document.getElementById("q5").value = x;
+            document.getElementById("q5").style.borderColor = "green";
+            document.getElementById("myInput").value = "";
+        }
+        if (x == "{{ myObject.answers[5] }}") {
+            document.getElementById("q6").value = x;
+            document.getElementById("q6").style.borderColor = "green";
+            document.getElementById("myInput").value = "";
+        }
+        if (x == "{{ myObject.answers[6] }}") {
+            document.getElementById("q7").value = x;
+            document.getElementById("q7").style.borderColor = "green";
+            document.getElementById("myInput").value = "";
+        }
+        if (x == "{{ myObject.answers[7] }}") {
+            document.getElementById("q8").value = x;
+            document.getElementById("q8").style.borderColor = "green";
+            document.getElementById("myInput").value = "";
+        }
+        if (x == "{{ myObject.answers[8] }}") {
+            document.getElementById("q9").value = x;
+            document.getElementById("q9").style.borderColor = "green";
+            document.getElementById("myInput").value = "";
+        }
+        if (x == "{{ myObject.answers[9] }}") {
+            document.getElementById("q10").value = x;
+            document.getElementById("q10").style.borderColor = "green";
+            document.getElementById("myInput").value = "";
+        }
+        if (x == "{{ myObject.answers[10] }}") {
+            document.getElementById("q11").value = x;
+            document.getElementById("q11").style.borderColor = "green";
+            document.getElementById("myInput").value = "";
+        }
+        if (x == "{{ myObject.answers[11] }}") {
+            document.getElementById("q12").value = x;
+            document.getElementById("q12").style.borderColor = "green";
+            document.getElementById("myInput").value = "";
+        }
+        if (x == "{{ myObject.answers[12] }}") {
+            document.getElementById("q13").value = x;
+            document.getElementById("q13").style.borderColor = "green";
+            document.getElementById("myInput").value = "";
+        }
+        if (x == "{{ myObject.answers[13] }}") {
+            document.getElementById("q14").value = x;
+            document.getElementById("q14").style.borderColor = "green";
+            document.getElementById("myInput").value = "";
+        }
+        if (x == "{{ myObject.answers[14] }}") {
+            document.getElementById("q15").value = x;
+            document.getElementById("q15").style.borderColor = "green";
+            document.getElementById("myInput").value = "";
+        }
+        if (x == "{{ myObject.answers[15] }}") {
+            document.getElementById("q16").value = x;
+            document.getElementById("q16").style.borderColor = "green";
+            document.getElementById("myInput").value = "";
+        }
+        if (x == "{{ myObject.answers[16] }}") {
+            document.getElementById("q17").value = x;
+            document.getElementById("q17").style.borderColor = "green";
+            document.getElementById("myInput").value = "";
+        }
+        if (x == "{{ myObject.answers[17] }}") {
+            document.getElementById("q18").value = x;
+            document.getElementById("q18").style.borderColor = "green";
+            document.getElementById("myInput").value = "";
+        }
+        if (x == "{{ myObject.answers[18] }}") {
+            document.getElementById("q19").value = x;
+            document.getElementById("q19").style.borderColor = "green";
+            document.getElementById("myInput").value = "";
+        }
+        if (x == "{{ myObject.answers[19] }}") {
+            document.getElementById("q20").value = x;
+            document.getElementById("q20").style.borderColor = "green";
+            document.getElementById("myInput").value = "";
+        }
+        if (x == "{{ myObject.answers[20] }}") {
+            document.getElementById("q21").value = x;
+            document.getElementById("q21").style.borderColor = "green";
+            document.getElementById("myInput").value = "";
+        }
+        if (x == "{{ myObject.answers[21] }}") {
+            document.getElementById("q22").value = x;
+            document.getElementById("q22").style.borderColor = "green";
+            document.getElementById("myInput").value = "";
+        }
+        if (x == "{{ myObject.answers[22] }}") {
+            document.getElementById("q23").value = x;
+            document.getElementById("q23").style.borderColor = "green";
+            document.getElementById("myInput").value = "";
+        }
+        if (x == "{{ myObject.answers[23] }}") {
+            document.getElementById("q24").value = x;
+            document.getElementById("q24").style.borderColor = "green";
+            document.getElementById("myInput").value = "";
+        }
+        if (x == "{{ myObject.answers[24] }}") {
+            document.getElementById("q25").value = x;
+            document.getElementById("q25").style.borderColor = "green";
+            document.getElementById("myInput").value = "";
+        }
+        if (x == "{{ myObject.answers[25] }}") {
+            document.getElementById("q26").value = x;
+            document.getElementById("q26").style.borderColor = "green";
+            document.getElementById("myInput").value = "";
+        }
+        if (x == "{{ myObject.answers[26] }}") {
+            document.getElementById("q27").value = x;
+            document.getElementById("q27").style.borderColor = "green";
+            document.getElementById("myInput").value = "";
+        }
+        if (x == "{{ myObject.answers[27] }}") {
+            document.getElementById("q28").value = x;
+            document.getElementById("q28").style.borderColor = "green";
+            document.getElementById("myInput").value = "";
+        }
+        if (x == "{{ myObject.answers[28] }}") {
+            document.getElementById("q29").value = x;
+            document.getElementById("q29").style.borderColor = "green";
+            document.getElementById("myInput").value = "";
+        }
+        if (x == "{{ myObject.answers[29] }}") {
+            document.getElementById("q30").value = x;
+            document.getElementById("q30").style.borderColor = "green";
+            document.getElementById("myInput").value = "";
+        }
+        if (x == "{{ myObject.answers[30] }}") {
+            document.getElementById("q31").value = x;
+            document.getElementById("q31").style.borderColor = "green";
+            document.getElementById("myInput").value = "";
+        }
+        if (x == "{{ myObject.answers[31] }}") {
+            document.getElementById("q32").value = x;
+            document.getElementById("q32").style.borderColor = "green";
+            document.getElementById("myInput").value = "";
+        }
+    }
+
+function revealFunction() {
+  var reveal1 = document.getElementById("q1");
+  reveal1.value = "{{ myObject.answers[0] }}";
+  var reveal2 = document.getElementById("q2");
+  reveal2.value = "{{ myObject.answers[1] }}";
+  var reveal3 = document.getElementById("q3");
+  reveal3.value = "{{ myObject.answers[2] }}";
+  var reveal4 = document.getElementById("q4");
+  reveal4.value = "{{ myObject.answers[3] }}";
+  var reveal5 = document.getElementById("q5");
+  reveal5.value = "{{ myObject.answers[4] }}";
+  var reveal6 = document.getElementById("q6");
+  reveal6.value = "{{ myObject.answers[5] }}";
+  var reveal7 = document.getElementById("q7");
+  reveal7.value = "{{ myObject.answers[6] }}";
+  var reveal8 = document.getElementById("q8");
+  reveal8.value = "{{ myObject.answers[7] }}";
+  var reveal9 = document.getElementById("q9");
+  reveal9.value = "{{ myObject.answers[8] }}";
+  var reveal10 = document.getElementById("q10");
+  reveal10.value = "{{ myObject.answers[9] }}";
+  var reveal11 = document.getElementById("q11");
+  reveal11.value = "{{ myObject.answers[10] }}";
+  var reveal12 = document.getElementById("q12");
+  reveal12.value = "{{ myObject.answers[11] }}";
+  var reveal13 = document.getElementById("q13");
+  reveal13.value = "{{ myObject.answers[12] }}";
+  var reveal14 = document.getElementById("q14");
+  reveal14.value = "{{ myObject.answers[13] }}";
+  var reveal15 = document.getElementById("q15");
+  reveal15.value = "{{ myObject.answers[14] }}";
+  var reveal16 = document.getElementById("q16");
+  reveal16.value = "{{ myObject.answers[15] }}";
+  var reveal17 = document.getElementById("q17");
+  reveal17.value = "{{ myObject.answers[16] }}";
+  var reveal18 = document.getElementById("q18");
+  reveal18.value = "{{ myObject.answers[17] }}";
+  var reveal19 = document.getElementById("q19");
+  reveal19.value = "{{ myObject.answers[18] }}";
+  var reveal20 = document.getElementById("q20");
+  reveal20.value = "{{ myObject.answers[19] }}";
+  var reveal21 = document.getElementById("q21");
+  reveal21.value = "{{ myObject.answers[20] }}";
+  var reveal22 = document.getElementById("q22");
+  reveal22.value = "{{ myObject.answers[21] }}";
+  var reveal23 = document.getElementById("q23");
+  reveal23.value = "{{ myObject.answers[22] }}";
+  var reveal24 = document.getElementById("q24");
+  reveal24.value = "{{ myObject.answers[23] }}";
+  var reveal25 = document.getElementById("q25");
+  reveal25.value = "{{ myObject.answers[24] }}";
+  var reveal26 = document.getElementById("q26");
+  reveal26.value = "{{ myObject.answers[25] }}";
+  var reveal27 = document.getElementById("q27");
+  reveal27.value = "{{ myObject.answers[26] }}";
+  var reveal28 = document.getElementById("q28");
+  reveal28.value = "{{ myObject.answers[27] }}";
+  var reveal29 = document.getElementById("q29");
+  reveal29.value = "{{ myObject.answers[28] }}";
+  var reveal30 = document.getElementById("q30");
+  reveal30.value = "{{ myObject.answers[29] }}";
+  var reveal31 = document.getElementById("q31");
+  reveal31.value = "{{ myObject.answers[30] }}";
+  var reveal32 = document.getElementById("q32");
+  reveal32.value = "{{ myObject.answers[31] }}";
+  }
+</script>
+
+{% endblock %}

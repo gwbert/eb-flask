@@ -1,0 +1,386 @@
+{% extends "base.html" %}
+{% block content %}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<style>
+    /* Make the image fully responsive */
+    .carousel-inner img {
+        width: 100%;
+        height: 100%;
+    }
+    .jumbotron{
+  margin-top: 20px;
+  background-image: url("https://live.staticflickr.com/7440/26658265504_244ab8bba1_b.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 250px;
+}
+
+</style>
+
+<div class="jumbotron p-4 p-md-5 text-white text-center rounded bg-dark">
+    <div class="col-md-12 px-0">
+        <h1 class="display-4 font-italic">Geography</h1>
+    <p class="lead my-3">Furthest Firth? Farthest Forth? Lake or Loch?</p>
+    </div>
+  </div>
+
+  <div id="demo" class="carousel slide" data-ride="carousel">
+
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+  
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row mb-2">
+            <div class="col-md-6">
+              <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 ">Geography</strong>
+                  <h3 class="mb-0">Quickfire 5</h3>
+                  <p class="card-text mb-auto">Deepest? Highest? Longest?</p>
+                  <a href="{{ url_for('smallquiz', quizName='longestDeepest') }}" class="stretched-link btn-success">Take the quiz</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 ">Geography</strong>
+                  <h3 class="mb-0">Name the River</h3>
+                  <p class="mb-auto">May the Forth be with you</p>
+                  <a href="{{ url_for('smallquiz', quizName='rivers') }}" class="stretched-link btn-success">Take the quiz</a>
+                </div>
+              </div>
+            </div>
+          </div>      </div>
+      <div class="carousel-item">
+        <div class="row mb-2">
+            <div class="col-md-6">
+              <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 ">Geography</strong>
+                  <h3 class="mb-0">Name the Loch</h3>
+                  <p class="card-text mb-auto">Can you guess these famous lochs?</p>
+                  <a href="{{ url_for('smallquiz', quizName='nameTheLoch') }}" class="stretched-link btn-success">Take the quiz</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 ">Geography</strong>
+                  <h3 class="mb-0">Snowiest Places</h3>
+                  <p class="mb-auto">Can you guess the Snowiest Places in Scotland?</p>
+                  <a href="{{ url_for('smallquiz', quizName='snowiestPlaces') }}" class="stretched-link btn-success">Take the quiz</a>
+                </div>
+              </div>
+            </div>
+          </div>      </div>
+      <div class="carousel-item">
+        <div class="row mb-2">
+            <div class="col-md-6">
+              <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 ">Geography</strong>
+                  <h3 class="mb-0">Island Capitals</h3>
+                  
+                  <p class="card-text mb-auto">The Skye's the limit in our Island Capitals quiz</p>
+                  <a href="{{ url_for('smallquiz', quizName='islandCapitals') }}" class="stretched-link btn-success">Take the quiz</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 ">Geography</strong>
+                  <h3 class="mb-0">Ultimate Munro Quiz</h3>
+                  
+                  <p class="mb-auto">Highest Munro? Lowest Munro? Was a Munro? Test your knowledge here</p>
+                  <a href="" class="stretched-link btn-success">Take the quiz</a>
+                </div>
+              </div>
+            </div>
+          </div>      </div>
+    </div>
+  
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  
+  </div>
+
+  <hr>
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Bridges. <span class="text-muted">Picture Quiz.</span></h2>
+        <p class="lead">Can you name these iconic bridges?</p>
+      </div>
+      <div class="col-md-5">
+        <a href="{{ url_for('picturequiz', quizName='geoBridges') }}" class="stretched-link btn-warning"></a>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="250" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><image href="https://www.svgrepo.com/show/34326/bridge.svg"></svg>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Scottish Glens. <span class="text-muted">Picture Quiz.</span></h2>
+        <p class="lead">Can you guess the name of these gorgeous Scottish glens?</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <a href="{{ url_for('picturequiz', quizName='scottishGlens') }}" class="stretched-link"></a>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="250" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><image href="https://www.svgrepo.com/show/72172/forest.svg"></image></svg>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Hebridean Isles. <span class="text-muted">Picture Quiz.</span></h2>
+        <p class="lead">Easy.</p>
+      </div>
+      <div class="col-md-5">
+        <a href="{{ url_for('picturequiz', quizName='hebrideanIsles') }}" class="stretched-link"></a>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="250" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><image href="https://www.svgrepo.com/show/92779/island.svg"></image></svg>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Rivers. <span class="text-muted">Picture Quiz.</span></h2>
+        <p class="lead">Can you name these six iconic rivers!</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <a href="{{ url_for('picturequiz', quizName='pictureRivers') }}" class="stretched-link"></a>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="250" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><image href="https://www.svgrepo.com/show/88660/river-trail.svg"></image></svg>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Wettest Towns and Cities. <span class="text-muted">Top Ten</span></h2>
+        <p class="lead">How many do you know?</p>
+      </div>
+      <div class="col-md-5">
+        <a href="{{ url_for('tenquiz', quizName='wettestTowns') }}" class="stretched-link"></a>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="250" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><image href="https://www.svgrepo.com/show/155361/scotland.svg"></image></svg>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+    <!-- /END THE FEATURETTES -->
+
+  <hr>
+  <h2 class="display-5 text-center">Small Quizzes</h2>
+  <hr>
+
+  <div class="row mb-2">
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Geography</strong>
+          <h3 class="mb-0">Distilleries Quiz</h3>
+          <p class="card-text mb-auto">Guess the Distillery</p>
+          <a href="{{ url_for('smallquiz', quizName='highlandDistilleries') }}" class="stretched-link btn-success">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Geography</strong>
+          <h3 class="mb-0">Breweries</h3>
+          <p class="mb-auto">Where is this wonderful beer brewed?</p>
+          <a href="{{ url_for('smallquiz', quizName='highlandBreweries') }}" class="stretched-link btn-success">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Geography</strong>
+          <h3 class="mb-0">Mountain Passes</h3>
+          <p class="mb-auto">4 passes and one Bealach</p>
+          <a href="{{ url_for('smallquiz', quizName='highlandMountainPasses') }}" class="stretched-link btn-success">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Geography</strong>
+          <h3 class="mb-0">Highland Rivers</h3>
+          <p class="mb-auto">No Tweed here</p>
+          <a href="{{ url_for('smallquiz', quizName='highlandRivers') }}" class="stretched-link btn-success">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+  
+  <hr>
+  <h2 class="display-5 text-center">Medium Quizzes</h2>
+  <hr>
+
+  <div class="row mb-2">
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Geography</strong>
+          <h3 class="mb-0">Sunniest Towns and Cities</h3>
+          <p class="card-text mb-auto">East coast, anyone?</p>
+          <a href="{{ url_for('tenquiz', quizName='sunniestPlaces') }}" class="stretched-link btn-success">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Geography</strong>
+          <h3 class="mb-0">Waterfalls</h3>
+          <p class="mb-auto">Can you name these wonderful waterfalls?</p>
+          <a href="{{ url_for('mediumquiz', quizName='highlandFalls') }}" class="stretched-link btn-success">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Geography</strong>
+          <h3 class="mb-0">Railway Stations</h3>
+          <p class="mb-auto">Can you guess the next one?</p>
+          <a href="{{ url_for('mediumquiz', quizName='highlandRailwayStations') }}" class="stretched-link btn-success">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Geography</strong>
+          <h3 class="mb-0">Peninsulas</h3>
+          <p class="mb-auto">Stick your nose out here</p>
+          <a href="{{ url_for('mediumquiz', quizName='highlandPeninsulas') }}" class="stretched-link btn-success">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+  
+  <hr>
+  <h2 class="display-5 text-center">Picture Quizzes</h2>
+  <hr>
+
+  <div class="row mb-2">
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Geography</strong>
+          <h3 class="mb-0">Beaches</h3>
+          <p class="card-text mb-auto">Picture Quiz</p>
+          <a href="{{ url_for('picturequiz', quizName='beaches') }}" class="stretched-link btn-success">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Geography</strong>
+          <h3 class="mb-0">Name the City</h3>
+          <p class="mb-auto">Easy</p>
+          <a href="{{ url_for('picturequiz', quizName='nameTheCity') }}" class="stretched-link btn-success">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Geography</strong>
+          <h3 class="mb-0">Name the City II</h3>
+          <p class="mb-auto">Harder</p>
+          <a href="{{ url_for('picturequiz', quizName='nameTheCityII') }}" class="stretched-link btn-success">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Geography</strong>
+          <h3 class="mb-0">Name the City III</h3>
+          <p class="mb-auto">Difficult</p>
+          <a href="{{ url_for('picturequiz', quizName='nameTheCityIII') }}" class="stretched-link btn-success">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+  
+  <hr>
+  <h2 class="display-5 text-center">Jumbo Quizzes</h2>
+  <hr>
+
+  <div class="row mb-2">
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Geography</strong>
+          <h3 class="mb-0">Island Quiz</h3>
+          <p class="card-text mb-auto">The Skye's the limit in our Island Capitals quiz</p>
+          <a href="{{ url_for('smallquiz', quizName='islandCapitals') }}" class="stretched-link btn-success">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Geography</strong>
+          <h3 class="mb-0">Geography Quiz</h3>
+          <p class="mb-auto">Quiz quiz quiz</p>
+          <a href="" class="stretched-link btn-success">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Geography</strong>
+          <h3 class="mb-0">Geography Quiz</h3>
+          <p class="mb-auto">Quiz quiz quiz</p>
+          <a href="" class="stretched-link btn-success">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Geography</strong>
+          <h3 class="mb-0">Geography Quiz</h3>
+          <p class="mb-auto">Quiz quiz quiz</p>
+          <a href="" class="stretched-link btn-success">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+  
+{% endblock %}

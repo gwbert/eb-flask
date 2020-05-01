@@ -1,0 +1,282 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+
+
+<style>
+  #quizbox {
+      border: solid;
+      border-width: 1px;
+  } 
+  .jumbotron {
+    background-image: url("https://farm8.staticflickr.com/7421/13787234775_0aeb271d27_b.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 250px;
+    border: black;
+    border: 5px;
+  }
+</style>
+
+
+<div class="jumbotron p-4 p-md-5 text-white text-center rounded bg-dark">
+<h1 class="display-4 font-italic">Quiz:</h1>
+<h1 class="display-4 font-italic">{{ myObject.headline }}</h1>
+
+</div>
+</div>
+<div class="container text-center">
+<p class="lead my-3">{{ myObject.byline }}</p>
+</div>
+
+<div class="container" id="quizbox">
+<form>
+  <div class="form-group row">
+    <label for="question" class="col-sm-2 col-form-label font-weight-bold">Q.1</label>
+    <div class="col-sm-10">
+      <input type="text" readonly class="form-control-plaintext" id="question" value="{{ myObject.questions[0] }}">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="answer" class="col-sm-2 col-form-label font-weight-bold">Answer</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="q1">
+  </div>
+      </div>
+      <div class="form-group row">
+          <label for="question" class="col-sm-2 col-form-label font-weight-bold">Q.2</label>
+          <div class="col-sm-10">
+            <input type="text" readonly class="form-control-plaintext" id="question" value="{{ myObject.questions[1] }}">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="answer" class="col-sm-2 col-form-label font-weight-bold">Answer</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="q2">
+        </div>
+            </div>
+            <div class="form-group row">
+              <label for="question" class="col-sm-2 col-form-label font-weight-bold">Q.3</label>
+              <div class="col-sm-10">
+                <input type="text" readonly class="form-control-plaintext" id="question" value="{{ myObject.questions[2] }}">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="answer" class="col-sm-2 col-form-label font-weight-bold">Answer</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="q3">
+            </div>
+                </div>
+                <div class="form-group row">
+                  <label for="question" class="col-sm-2 col-form-label font-weight-bold">Q.4</label>
+                  <div class="col-sm-10">
+                    <input type="text" readonly class="form-control-plaintext" id="question" value="{{ myObject.questions[3] }}">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="answer" class="col-sm-2 col-form-label font-weight-bold">Answer</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="q4">
+                </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="question" class="col-sm-2 col-form-label font-weight-bold">Q.5</label>
+                      <div class="col-sm-10">
+                        <input type="text" readonly class="form-control-plaintext" id="question" value="{{ myObject.questions[4] }}">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="answer" class="col-sm-2 col-form-label font-weight-bold">Answer</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="q5">
+                    </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="question" class="col-sm-2 col-form-label font-weight-bold">Q.6</label>
+                          <div class="col-sm-10">
+                            <input type="text" readonly class="form-control-plaintext" id="question" value="{{ myObject.questions[5] }}">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="answer" class="col-sm-2 col-form-label font-weight-bold">Answer</label>
+                          <div class="col-sm-10">
+                            <input type="text" class="form-control" id="q6">
+                        </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="question" class="col-sm-2 col-form-label font-weight-bold">Q.7</label>
+                              <div class="col-sm-10">
+                                <input type="text" readonly class="form-control-plaintext" id="question" value="{{ myObject.questions[6] }}">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="answer" class="col-sm-2 col-form-label font-weight-bold">Answer</label>
+                              <div class="col-sm-10">
+                                <input type="text" class="form-control" id="q7">
+                            </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="question" class="col-sm-2 col-form-label font-weight-bold">Q.8</label>
+                                  <div class="col-sm-10">
+                                    <input type="text" readonly class="form-control-plaintext" id="question" value="{{ myObject.questions[7] }}">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="answer" class="col-sm-2 col-form-label font-weight-bold">Answer</label>
+                                  <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="q8">
+                                </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <label for="question" class="col-sm-2 col-form-label font-weight-bold">Q.9</label>
+                                      <div class="col-sm-10">
+                                        <input type="text" readonly class="form-control-plaintext" id="question" value="{{ myObject.questions[8] }}">
+                                      </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <label for="answer" class="col-sm-2 col-form-label font-weight-bold">Answer</label>
+                                      <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="q9">
+                                    </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label for="question" class="col-sm-2 col-form-label font-weight-bold">Q.10</label>
+                                          <div class="col-sm-10">
+                                            <input type="text" readonly class="form-control-plaintext" id="question" value="{{ myObject.questions[9] }}">
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label for="answer" class="col-sm-2 col-form-label font-weight-bold">Answer</label>
+                                          <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="q10">
+                                        </div>
+                                            </div>
+
+</form>
+<button class="btn btn-primary" type="submit" onclick="myFunction()">Submit</button>
+<button class="btn btn-secondary" type="submit" onclick="revealFunction()">Reveal</button>
+<hr>
+<p id="reveal"></p>
+<p id="score"></p>
+</div>
+
+
+
+
+  <script>
+
+      function myFunction() {
+      var input1 = document.getElementById("q1").value;
+      var input2 = document.getElementById("q2").value; 
+      var input3 = document.getElementById("q3").value; 
+      var input4 = document.getElementById("q4").value; 
+      var input5 = document.getElementById("q5").value;
+      var input6 = document.getElementById("q6").value;
+      var input7 = document.getElementById("q7").value; 
+      var input8 = document.getElementById("q8").value; 
+      var input9 = document.getElementById("q9").value; 
+      var input10 = document.getElementById("q10").value;
+      var answer1 = "{{ myObject.answers[0] }}";
+      var answer2 = "{{ myObject.answers[1] }}";
+      var answer3 = "{{ myObject.answers[2] }}";
+      var answer4 = "{{ myObject.answers[3] }}";
+      var answer5 = "{{ myObject.answers[4] }}";
+      var answer6 = "{{ myObject.answers[5] }}";
+      var answer7 = "{{ myObject.answers[6] }}";
+      var answer8 = "{{ myObject.answers[7] }}";
+      var answer9 = "{{ myObject.answers[8] }}";
+      var answer10 = "{{ myObject.answers[9] }}";
+      var counter = 0;
+      if (input1.toLowerCase() === answer1) {
+          counter ++;
+          document.getElementById("q1").style.borderColor = "green";
+      } else {
+          document.getElementById("q1").style.borderColor = "red";
+      }
+      if (input2.toLowerCase() === answer2) {
+          counter ++;
+          document.getElementById("q2").style.borderColor = "green";
+      } else {
+          document.getElementById("q2").style.borderColor = "red";
+      }
+      if (input3.toLowerCase() === answer3) {
+          counter ++;
+          document.getElementById("q3").style.borderColor = "green";
+      } else {
+          document.getElementById("q3").style.borderColor = "red";
+      }
+      if (input4.toLowerCase() === answer4) {
+          counter ++;
+          document.getElementById("q4").style.borderColor = "green";
+      } else {
+          document.getElementById("q4").style.borderColor = "red";
+      }
+      if (input5.toLowerCase() === answer5) {
+          counter ++;
+          document.getElementById("q5").style.borderColor = "green";
+      } else {
+          document.getElementById("q5").style.borderColor = "red";
+      }
+      if (input6.toLowerCase() === answer6) {
+          counter ++;
+          document.getElementById("q6").style.borderColor = "green";
+      } else {
+          document.getElementById("q6").style.borderColor = "red";
+      }
+      if (input7.toLowerCase() === answer7) {
+          counter ++;
+          document.getElementById("q7").style.borderColor = "green";
+      } else {
+          document.getElementById("q7").style.borderColor = "red";
+      }
+      if (input8.toLowerCase() === answer8) {
+          counter ++;
+          document.getElementById("q8").style.borderColor = "green";
+      } else {
+          document.getElementById("q8").style.borderColor = "red";
+      }
+      if (input9.toLowerCase() === answer9) {
+          counter ++;
+          document.getElementById("q9").style.borderColor = "green";
+      } else {
+          document.getElementById("q9").style.borderColor = "red";
+      }
+      if (input10.toLowerCase() === answer10) {
+          counter ++;
+          document.getElementById("q10").style.borderColor = "green";
+      } else {
+          document.getElementById("q10").style.borderColor = "red";
+      }
+      document.getElementById("score").innerHTML = "You scored " + counter + " out of 10!";
+  }
+
+  function revealFunction() {
+  var reveal1 = document.getElementById("q1");
+  reveal1.value = "{{ myObject.answers[0] }}";
+  var reveal2 = document.getElementById("q2");
+  reveal2.value = "{{ myObject.answers[1] }}";
+  var reveal3 = document.getElementById("q3");
+  reveal3.value = "{{ myObject.answers[2] }}";
+  var reveal4 = document.getElementById("q4");
+  reveal4.value = "{{ myObject.answers[3] }}";
+  var reveal5 = document.getElementById("q5");
+  reveal5.value = "{{ myObject.answers[4] }}";
+  var reveal6 = document.getElementById("q6");
+  reveal6.value = "{{ myObject.answers[5] }}";
+  var reveal7 = document.getElementById("q7");
+  reveal7.value = "{{ myObject.answers[6] }}";
+  var reveal8 = document.getElementById("q8");
+  reveal8.value = "{{ myObject.answers[7] }}";
+  var reveal9 = document.getElementById("q9");
+  reveal9.value = "{{ myObject.answers[8] }}";
+  var reveal10 = document.getElementById("q10");
+  reveal10.value = "{{ myObject.answers[9] }}";
+  }
+
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+{% endblock %}

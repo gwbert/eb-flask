@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block content %}
+
+<style>
+    #quizbox {
+        border: solid;
+        border-width: 1px;
+    } 
+    .jumbotron {
+      background-image: url("https://farm8.staticflickr.com/7421/13787234775_0aeb271d27_b.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 250px;
+      border: black;
+      border: 5px;
+    }
+</style>
+
+<div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+    <div class="col-md-6 px-0">
+      <h1 class="display-4 font-italic">{{ myObject.description }}</h1>
+      <p class="lead my-3">Quiz</p>
+    </div>
+</div>
+    <div class="container" id="quizbox">
+    <form>
+        <div class="form-group row">
+          <label for="question" class="col-sm-2 col-form-label font-weight-bold">Q</label>
+          <div class="col-sm-10">
+            <input type="text" readonly class="form-control-plaintext" id="question" value="{{ myObject.question }}">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="answer" class="col-sm-2 col-form-label font-weight-bold">Answer</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="answer">
+        </div>
+            </div>
+      </form>
+    </div>
+    <button class="btn btn-primary btn-block" type="submit" onclick="myFunction()">Submit</button>
+    <hr>
+    <p id=reveal></p>
+
+    <script>
+        function myFunction() {
+        var input = document.getElementById("answer").value; 
+        var answer = "{{ myObject.answer }}";
+        if (input.toLowerCase() === answer) {
+            greeting = "Correct!";
+            document.getElementById("answer").style.borderColor = "green";
+        } else {
+            greeting = "Incorrect";
+            document.getElementById("answer").style.borderColor = "red";
+        }
+        document.getElementById("reveal").innerHTML = greeting;
+    }
+    </script>
+
+{% endblock %}

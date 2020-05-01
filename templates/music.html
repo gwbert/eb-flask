@@ -1,0 +1,299 @@
+{% extends "base.html" %}
+{% block content %}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<style>
+    /* Make the image fully responsive */
+    .carousel-inner img {
+        width: 100%;
+        height: 100%;
+    }
+    .jumbotron{
+  margin-top: 20px;
+  background-image: url("https://live.staticflickr.com/7346/27211780761_0d2d6b67ae_b.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 250px;
+}
+
+</style>
+
+<div class="jumbotron p-4 p-md-5 text-white text-center rounded bg-dark">
+    <div class="col-md-12 px-0">
+        <h1 class="display-4 font-italic">Music</h1>
+    <p class="lead my-3">Are Snow Patrol really Scottish? And other burning questions</p>
+    </div>
+  </div>
+
+  <div id="demo" class="carousel slide" data-ride="carousel">
+
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+  
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row mb-2">
+            <div class="col-md-6">
+              <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 ">Music</strong>
+                  <h3 class="mb-0">Island Capitals</h3>
+                          <p class="card-text mb-auto">The Skye's the limit in our Island Capitals quiz</p>
+                  <a href="{{ url_for('smallquiz', quizName='islandCapitals') }}" class="stretched-link btn-secondary">Take the quiz</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 ">Music</strong>
+                  <h3 class="mb-0">Ultimate Munro Quiz</h3>
+                          <p class="mb-auto">Highest Munro? Lowest Munro? Was a Munro? Test your knowledge here</p>
+                  <a href="" class="stretched-link btn-secondary">Take the quiz</a>
+                </div>
+              </div>
+            </div>
+          </div>      </div>
+      <div class="carousel-item">
+        <div class="row mb-2">
+            <div class="col-md-6">
+              <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 ">Music</strong>
+                  <h3 class="mb-0">Island Capitals</h3>
+                          <p class="card-text mb-auto">The Skye's the limit in our Island Capitals quiz</p>
+                  <a href="{{ url_for('smallquiz', quizName='islandCapitals') }}" class="stretched-link btn-secondary">Take the quiz</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 ">Music</strong>
+                  <h3 class="mb-0">Ultimate Munro Quiz</h3>
+                          <p class="mb-auto">Highest Munro? Lowest Munro? Was a Munro? Test your knowledge here</p>
+                  <a href="" class="stretched-link btn-secondary">Take the quiz</a>
+                </div>
+              </div>
+            </div>
+          </div>      </div>
+      <div class="carousel-item">
+        <div class="row mb-2">
+            <div class="col-md-6">
+              <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 ">Music</strong>
+                  <h3 class="mb-0">Island Capitals</h3>
+                          <p class="card-text mb-auto">The Skye's the limit in our Island Capitals quiz</p>
+                  <a href="{{ url_for('smallquiz', quizName='islandCapitals') }}" class="stretched-link btn-secondary">Take the quiz</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 ">Music</strong>
+                  <h3 class="mb-0">Ultimate Munro Quiz</h3>
+                          <p class="mb-auto">Highest Munro? Lowest Munro? Was a Munro? Test your knowledge here</p>
+                  <a href="" class="stretched-link btn-secondary">Take the quiz</a>
+                </div>
+              </div>
+            </div>
+          </div>      </div>
+    </div>
+  
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  
+  </div>
+
+  <hr>
+
+  <div class="row mb-2">
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Music</strong>
+          <h3 class="mb-0">Island Quiz</h3>
+          <p class="card-text mb-auto">The Skye's the limit in our Island Capitals quiz</p>
+          <a href="{{ url_for('smallquiz', quizName='islandCapitals') }}" class="stretched-link btn-secondary">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Music</strong>
+          <h3 class="mb-0">Music Quiz</h3>
+          <p class="mb-auto">Quiz quiz quiz</p>
+          <a href="" class="stretched-link btn-secondary">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Music</strong>
+          <h3 class="mb-0">Music Quiz</h3>
+          <p class="mb-auto">Quiz quiz quiz</p>
+          <a href="" class="stretched-link btn-secondary">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Music</strong>
+          <h3 class="mb-0">Music Quiz</h3>
+          <p class="mb-auto">Quiz quiz quiz</p>
+          <a href="" class="stretched-link btn-secondary">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+  
+  <div class="row mb-2">
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Music</strong>
+          <h3 class="mb-0">Island Quiz</h3>
+          <p class="card-text mb-auto">The Skye's the limit in our Island Capitals quiz</p>
+          <a href="{{ url_for('smallquiz', quizName='islandCapitals') }}" class="stretched-link btn-secondary">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Music</strong>
+          <h3 class="mb-0">Music Quiz</h3>
+          <p class="mb-auto">Quiz quiz quiz</p>
+          <a href="" class="stretched-link btn-secondary">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Music</strong>
+          <h3 class="mb-0">Music Quiz</h3>
+          <p class="mb-auto">Quiz quiz quiz</p>
+          <a href="" class="stretched-link btn-secondary">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Music</strong>
+          <h3 class="mb-0">Music Quiz</h3>
+          <p class="mb-auto">Quiz quiz quiz</p>
+          <a href="" class="stretched-link btn-secondary">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+  
+  <div class="row mb-2">
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Music</strong>
+          <h3 class="mb-0">Island Quiz</h3>
+          <p class="card-text mb-auto">The Skye's the limit in our Island Capitals quiz</p>
+          <a href="{{ url_for('smallquiz', quizName='islandCapitals') }}" class="stretched-link btn-secondary">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Music</strong>
+          <h3 class="mb-0">Music Quiz</h3>
+          <p class="mb-auto">Quiz quiz quiz</p>
+          <a href="" class="stretched-link btn-secondary">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Music</strong>
+          <h3 class="mb-0">Music Quiz</h3>
+          <p class="mb-auto">Quiz quiz quiz</p>
+          <a href="" class="stretched-link btn-secondary">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Music</strong>
+          <h3 class="mb-0">Music Quiz</h3>
+          <p class="mb-auto">Quiz quiz quiz</p>
+          <a href="" class="stretched-link btn-secondary">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+  
+  <div class="row mb-2">
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Music</strong>
+          <h3 class="mb-0">Island Quiz</h3>
+          <p class="card-text mb-auto">The Skye's the limit in our Island Capitals quiz</p>
+          <a href="{{ url_for('smallquiz', quizName='islandCapitals') }}" class="stretched-link btn-secondary">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Music</strong>
+          <h3 class="mb-0">Music Quiz</h3>
+          <p class="mb-auto">Quiz quiz quiz</p>
+          <a href="" class="stretched-link btn-secondary">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Music</strong>
+          <h3 class="mb-0">Music Quiz</h3>
+          <p class="mb-auto">Quiz quiz quiz</p>
+          <a href="" class="stretched-link btn-secondary">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Music</strong>
+          <h3 class="mb-0">Music Quiz</h3>
+          <p class="mb-auto">Quiz quiz quiz</p>
+          <a href="" class="stretched-link btn-secondary">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+{% endblock %}
