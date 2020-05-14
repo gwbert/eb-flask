@@ -18,7 +18,6 @@
     }
 </style>
 
-
 <div class="jumbotron p-4 p-md-5 text-white text-center rounded bg-dark">
   <h1 class="display-4 font-italic">Quiz:</h1>
   <h1 class="display-4 font-italic">{{ myObject.headline }}</h1>
@@ -172,96 +171,92 @@
   <p id="score"></p>
 </div>
 
-
-
-
-    <script>
-
-        function myFunction() {
-        var input1 = document.getElementById("q1").value;
-        var input2 = document.getElementById("q2").value; 
-        var input3 = document.getElementById("q3").value; 
-        var input4 = document.getElementById("q4").value; 
-        var input5 = document.getElementById("q5").value;
-        var input6 = document.getElementById("q6").value;
-        var input7 = document.getElementById("q7").value; 
-        var input8 = document.getElementById("q8").value; 
-        var input9 = document.getElementById("q9").value; 
-        var input10 = document.getElementById("q10").value;
-        var input11 = document.getElementById("q11").value;
-        var answer1 = "{{ myObject.answers[0] }}";
-        var answer2 = "{{ myObject.answers[1] }}";
-        var answer3 = "{{ myObject.answers[2] }}";
-        var answer4 = "{{ myObject.answers[3] }}";
-        var answer5 = "{{ myObject.answers[4] }}";
-        var answer6 = "{{ myObject.answers[5] }}";
-        var answer7 = "{{ myObject.answers[6] }}";
-        var answer8 = "{{ myObject.answers[7] }}";
-        var answer9 = "{{ myObject.answers[8] }}";
-        var answer10 = "{{ myObject.answers[9] }}";
-        var answer11 = "{{ myObject.answers[10] }}";
-        var counter = 0;
-        if (input1.toLowerCase() === answer1) {
+<script>
+function myFunction() {
+var input1 = document.getElementById("q1").value;
+var input2 = document.getElementById("q2").value; 
+var input3 = document.getElementById("q3").value; 
+var input4 = document.getElementById("q4").value; 
+var input5 = document.getElementById("q5").value;
+var input6 = document.getElementById("q6").value;
+var input7 = document.getElementById("q7").value; 
+var input8 = document.getElementById("q8").value; 
+var input9 = document.getElementById("q9").value; 
+var input10 = document.getElementById("q10").value;
+var input11 = document.getElementById("q11").value;
+var answer1 = "{{ myObject.answers[0] }}";
+var answer2 = "{{ myObject.answers[1] }}";
+var answer3 = "{{ myObject.answers[2] }}";
+var answer4 = "{{ myObject.answers[3] }}";
+var answer5 = "{{ myObject.answers[4] }}";
+var answer6 = "{{ myObject.answers[5] }}";
+var answer7 = "{{ myObject.answers[6] }}";
+var answer8 = "{{ myObject.answers[7] }}";
+var answer9 = "{{ myObject.answers[8] }}";
+var answer10 = "{{ myObject.answers[9] }}";
+var answer11 = "{{ myObject.answers[10] }}";
+var counter = 0;
+if (input1.toLowerCase() === answer1) {
             counter ++;
             document.getElementById("q1").style.borderColor = "green";
-        } else {
+    } else {
             document.getElementById("q1").style.borderColor = "red";
         }
-        if (input2.toLowerCase() === answer2) {
+if (input2.toLowerCase() === answer2) {
             counter ++;
             document.getElementById("q2").style.borderColor = "green";
-        } else {
+    } else {
             document.getElementById("q2").style.borderColor = "red";
         }
-        if (input3.toLowerCase() === answer3) {
+if (input3.toLowerCase() === answer3) {
             counter ++;
             document.getElementById("q3").style.borderColor = "green";
-        } else {
+    } else {
             document.getElementById("q3").style.borderColor = "red";
         }
-        if (input4.toLowerCase() === answer4) {
+if (input4.toLowerCase() === answer4) {
             counter ++;
             document.getElementById("q4").style.borderColor = "green";
-        } else {
+    } else {
             document.getElementById("q4").style.borderColor = "red";
         }
-        if (input5.toLowerCase() === answer5) {
+if (input5.toLowerCase() === answer5) {
             counter ++;
             document.getElementById("q5").style.borderColor = "green";
-        } else {
+    } else {
             document.getElementById("q5").style.borderColor = "red";
         }
-        if (input6.toLowerCase() === answer6) {
+if (input6.toLowerCase() === answer6) {
             counter ++;
             document.getElementById("q6").style.borderColor = "green";
         } else {
             document.getElementById("q6").style.borderColor = "red";
         }
-        if (input7.toLowerCase() === answer7) {
+if (input7.toLowerCase() === answer7) {
             counter ++;
             document.getElementById("q7").style.borderColor = "green";
         } else {
             document.getElementById("q7").style.borderColor = "red";
         }
-        if (input8.toLowerCase() === answer8) {
+if (input8.toLowerCase() === answer8) {
             counter ++;
             document.getElementById("q8").style.borderColor = "green";
         } else {
             document.getElementById("q8").style.borderColor = "red";
         }
-        if (input9.toLowerCase() === answer9) {
+if (input9.toLowerCase() === answer9) {
             counter ++;
             document.getElementById("q9").style.borderColor = "green";
         } else {
             document.getElementById("q9").style.borderColor = "red";
         }
-        if (input10.toLowerCase() === answer10) {
+if (input10.toLowerCase() === answer10) {
             counter ++;
             document.getElementById("q10").style.borderColor = "green";
         } else {
             document.getElementById("q10").style.borderColor = "red";
         }
-        if (input11.toLowerCase() === answer11) {
+if (input11.toLowerCase() === answer11) {
             counter ++;
             document.getElementById("q11").style.borderColor = "green";
         } else {
@@ -269,34 +264,31 @@
         }
         document.getElementById("score").innerHTML = "You scored " + counter + " out of 11!";
     }
-
-    function revealFunction() {
-    var reveal1 = document.getElementById("q1");
-    reveal1.value = "{{ myObject.answers[0] }}";
-    var reveal2 = document.getElementById("q2");
-    reveal2.value = "{{ myObject.answers[1] }}";
-    var reveal3 = document.getElementById("q3");
-    reveal3.value = "{{ myObject.answers[2] }}";
-    var reveal4 = document.getElementById("q4");
-    reveal4.value = "{{ myObject.answers[3] }}";
-    var reveal5 = document.getElementById("q5");
-    reveal5.value = "{{ myObject.answers[4] }}";
-    var reveal6 = document.getElementById("q6");
-    reveal6.value = "{{ myObject.answers[5] }}";
-    var reveal7 = document.getElementById("q7");
-    reveal7.value = "{{ myObject.answers[6] }}";
-    var reveal8 = document.getElementById("q8");
-    reveal8.value = "{{ myObject.answers[7] }}";
-    var reveal9 = document.getElementById("q9");
-    reveal9.value = "{{ myObject.answers[8] }}";
-    var reveal10 = document.getElementById("q10");
-    reveal10.value = "{{ myObject.answers[9] }}";
-    var reveal11 = document.getElementById("q11");
-    reveal11.value = "{{ myObject.answers[10] }}";
+    
+function revealFunction() {
+var reveal1 = document.getElementById("q1");
+reveal1.value = "{{ myObject.answers[0] }}";
+var reveal2 = document.getElementById("q2");
+reveal2.value = "{{ myObject.answers[1] }}";
+var reveal3 = document.getElementById("q3");
+reveal3.value = "{{ myObject.answers[2] }}";
+var reveal4 = document.getElementById("q4");
+reveal4.value = "{{ myObject.answers[3] }}";
+var reveal5 = document.getElementById("q5");
+reveal5.value = "{{ myObject.answers[4] }}";
+var reveal6 = document.getElementById("q6");
+reveal6.value = "{{ myObject.answers[5] }}";
+var reveal7 = document.getElementById("q7");
+reveal7.value = "{{ myObject.answers[6] }}";
+var reveal8 = document.getElementById("q8");
+reveal8.value = "{{ myObject.answers[7] }}";
+var reveal9 = document.getElementById("q9");
+reveal9.value = "{{ myObject.answers[8] }}";
+var reveal10 = document.getElementById("q10");
+reveal10.value = "{{ myObject.answers[9] }}";
+var reveal11 = document.getElementById("q11");
+reveal11.value = "{{ myObject.answers[10] }}";
     }
-
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+</script>
 
 {% endblock %}

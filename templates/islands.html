@@ -124,6 +124,128 @@
   
   </div>
 
+  <h2 class="display-5 text-center">Featured Quizzes</h2>
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Inhabited Islands. <span class="text-muted">Top 30.</span></h2>
+        <p class="lead">Picture Quiz.</p>
+      </div>
+      <div class="col-md-5">
+        <a href="{{ url_for('picturequiz', quizName='munroPicture') }}" class="stretched-link btn-warning"></a>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="250" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><image href="https://www.svgrepo.com/show/132123/island.svg"></svg>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Island Munros. <span class="text-muted">Picture Quiz.</span></h2>
+        <p class="lead">One for the purists.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <a href="{{ url_for('picturequiz', quizName='highlandHistory') }}" class="stretched-link"></a>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="250" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><image href="https://www.svgrepo.com/show/25413/mountain.svg"></image></svg>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Island Towns. <span class="text-muted">Picture Quiz.</span></h2>
+        <p class="lead">Can you name these beautiful island towns?</p>
+      </div>
+      <div class="col-md-5">
+        <a href="{{ url_for('smallquiz', quizName='hebrideanIsles') }}" class="stretched-link"></a>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="250" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><image href="https://www.svgrepo.com/show/214667/building-town.svg"></image></svg>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Island Places. <span class="text-muted">Medium Quiz.</span></h2>
+        <p class="lead">Missing Vowels Round!</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <a href="{{ url_for('smallquiz', quizName='quickFiveHighlandHistory') }}" class="stretched-link"></a>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="250" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><image href="https://www.svgrepo.com/show/63360/orkney-islands.svg"></image></svg>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Island Tourist Attractions. <span class="text-muted">Picture Quiz.</span></h2>
+        <p class="lead">How many do you know?</p>
+      </div>
+      <div class="col-md-5">
+        <a href="{{ url_for('smallquiz', quizName='shires') }}" class="stretched-link"></a>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="250" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><image href="https://www.svgrepo.com/show/61008/viking-ship.svg"></image></svg>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+    <!-- /END THE FEATURETTES -->
+
+    <hr>
+    <h2 class="display-5 text-center">Small Quizzes</h2>
+    <hr>
+
+<div class="row mb-2">
+  <div class="col-md-3">
+    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+      <div class="col p-4 d-flex flex-column position-static">
+        <strong class="d-inline-block mb-2 ">Islands</strong>
+        <h3 class="mb-0">Island Quiz</h3>
+        <p class="card-text mb-auto">The Skye's the limit in our Island Capitals quiz</p>
+        <a href="{{ url_for('smallquiz', quizName='islandCapitals') }}" class="stretched-link btn-success">Take the quiz</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+      <div class="col p-4 d-flex flex-column position-static">
+        <strong class="d-inline-block mb-2 ">Islands</strong>
+        <h3 class="mb-0">Islands Quiz</h3>
+        <p class="mb-auto">Quiz quiz quiz</p>
+        <a href="" class="stretched-link btn-success">Take the quiz</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+      <div class="col p-4 d-flex flex-column position-static">
+        <strong class="d-inline-block mb-2 ">Islands</strong>
+        <h3 class="mb-0">Islands Quiz</h3>
+        <p class="mb-auto">Quiz quiz quiz</p>
+        <a href="" class="stretched-link btn-success">Take the quiz</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+      <div class="col p-4 d-flex flex-column position-static">
+        <strong class="d-inline-block mb-2 ">Islands</strong>
+        <h3 class="mb-0">Islands Quiz</h3>
+        <p class="mb-auto">Quiz quiz quiz</p>
+        <a href="" class="stretched-link btn-success">Take the quiz</a>
+      </div>
+    </div>
+  </div>
+</div> 
+
+<hr>
+<h2 class="display-5 text-center">Medium Quizzes</h2>
 <hr>
 
 <div class="row mb-2">
@@ -169,48 +291,9 @@
   </div>
 </div> 
 
-<div class="row mb-2">
-  <div class="col-md-3">
-    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-      <div class="col p-4 d-flex flex-column position-static">
-        <strong class="d-inline-block mb-2 ">Islands</strong>
-        <h3 class="mb-0">Island Quiz</h3>
-        <p class="card-text mb-auto">The Skye's the limit in our Island Capitals quiz</p>
-        <a href="{{ url_for('smallquiz', quizName='islandCapitals') }}" class="stretched-link btn-success">Take the quiz</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-3">
-    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-      <div class="col p-4 d-flex flex-column position-static">
-        <strong class="d-inline-block mb-2 ">Islands</strong>
-        <h3 class="mb-0">Islands Quiz</h3>
-        <p class="mb-auto">Quiz quiz quiz</p>
-        <a href="" class="stretched-link btn-success">Take the quiz</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-3">
-    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-      <div class="col p-4 d-flex flex-column position-static">
-        <strong class="d-inline-block mb-2 ">Islands</strong>
-        <h3 class="mb-0">Islands Quiz</h3>
-        <p class="mb-auto">Quiz quiz quiz</p>
-        <a href="" class="stretched-link btn-success">Take the quiz</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-3">
-    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-      <div class="col p-4 d-flex flex-column position-static">
-        <strong class="d-inline-block mb-2 ">Islands</strong>
-        <h3 class="mb-0">Islands Quiz</h3>
-        <p class="mb-auto">Quiz quiz quiz</p>
-        <a href="" class="stretched-link btn-success">Take the quiz</a>
-      </div>
-    </div>
-  </div>
-</div> 
+<hr>
+<h2 class="display-5 text-center">Picture Quizzes</h2>
+<hr>
 
 <div class="row mb-2">
   <div class="col-md-3">
@@ -254,6 +337,10 @@
     </div>
   </div>
 </div> 
+
+<hr>
+<h2 class="display-5 text-center">Jumbo Quizzes</h2>
+<hr>
 
 <div class="row mb-2">
   <div class="col-md-3">

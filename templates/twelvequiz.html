@@ -21,7 +21,7 @@
 
 
 <div class="jumbotron p-4 p-md-5 text-white text-center rounded bg-dark">
-<h1 class="display-4 font-italic">20 Question Quiz:</h1>
+<h1 class="display-4 font-italic">12 Question Quiz:</h1>
 <h1 class="display-4 font-italic">{{ myObject.headline }}</h1>
 
 </div>
@@ -102,46 +102,6 @@
 </div>
 
 
-<div class="row">
-    <div class="col">
-        <input type="text" class="form-control" id="q13">
-    </div>
-    <div class="col">
-        <input type="text" class="form-control" id="q14">
-    </div>
-</div>
-
-
-<div class="row">
-    <div class="col">
-        <input type="text" class="form-control" id="q15">
-    </div>
-    <div class="col">
-        <input type="text" class="form-control" id="q16">
-    </div>
-</div>
-
-
-<div class="row">
-    <div class="col">
-        <input type="text" class="form-control" id="q17">
-    </div>
-    <div class="col">
-        <input type="text" class="form-control" id="q18">
-    </div>
-</div>
-
-
-<div class="row">
-    <div class="col">
-        <input type="text" class="form-control" id="q19">
-    </div>
-    <div class="col">
-        <input type="text" class="form-control" id="q20">
-    </div>
-</div>
-
-
 <button class="btn btn-secondary" type="submit" onclick="revealFunction()">Reveal</button>
 
 <hr>
@@ -216,46 +176,6 @@
             document.getElementById("q12").style.borderColor = "green";
             document.getElementById("myInput").value = "";
         }
-        if (x == "{{ myObject.answers[12] }}") {
-            document.getElementById("q13").value = x;
-            document.getElementById("q13").style.borderColor = "green";
-            document.getElementById("myInput").value = "";
-        }
-        if (x == "{{ myObject.answers[13] }}") {
-            document.getElementById("q14").value = x;
-            document.getElementById("q14").style.borderColor = "green";
-            document.getElementById("myInput").value = "";
-        }
-        if (x == "{{ myObject.answers[14] }}") {
-            document.getElementById("q15").value = x;
-            document.getElementById("q15").style.borderColor = "green";
-            document.getElementById("myInput").value = "";
-        }
-        if (x == "{{ myObject.answers[15] }}") {
-            document.getElementById("q16").value = x;
-            document.getElementById("q16").style.borderColor = "green";
-            document.getElementById("myInput").value = "";
-        }
-        if (x == "{{ myObject.answers[16] }}") {
-            document.getElementById("q17").value = x;
-            document.getElementById("q17").style.borderColor = "green";
-            document.getElementById("myInput").value = "";
-        }
-        if (x == "{{ myObject.answers[17] }}") {
-            document.getElementById("q18").value = x;
-            document.getElementById("q18").style.borderColor = "green";
-            document.getElementById("myInput").value = "";
-        }
-        if (x == "{{ myObject.answers[18] }}") {
-            document.getElementById("q19").value = x;
-            document.getElementById("q19").style.borderColor = "green";
-            document.getElementById("myInput").value = "";
-        }
-        if (x == "{{ myObject.answers[19] }}") {
-            document.getElementById("q20").value = x;
-            document.getElementById("q20").style.borderColor = "green";
-            document.getElementById("myInput").value = "";
-        }
     }
 
 function revealFunction() {
@@ -283,22 +203,6 @@ function revealFunction() {
   reveal11.value = "{{ myObject.answers[10] }}";
   var reveal12 = document.getElementById("q12");
   reveal12.value = "{{ myObject.answers[11] }}";
-  var reveal13 = document.getElementById("q13");
-  reveal13.value = "{{ myObject.answers[12] }}";
-  var reveal14 = document.getElementById("q14");
-  reveal14.value = "{{ myObject.answers[13] }}";
-  var reveal15 = document.getElementById("q15");
-  reveal15.value = "{{ myObject.answers[14] }}";
-  var reveal16 = document.getElementById("q16");
-  reveal16.value = "{{ myObject.answers[15] }}";
-  var reveal17 = document.getElementById("q17");
-  reveal17.value = "{{ myObject.answers[16] }}";
-  var reveal18 = document.getElementById("q18");
-  reveal18.value = "{{ myObject.answers[17] }}";
-  var reveal19 = document.getElementById("q19");
-  reveal19.value = "{{ myObject.answers[18] }}";
-  var reveal20 = document.getElementById("q20");
-  reveal20.value = "{{ myObject.answers[19] }}";
   }
 </script>
 

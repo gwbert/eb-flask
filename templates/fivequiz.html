@@ -21,7 +21,7 @@
 
 
 <div class="jumbotron p-4 p-md-5 text-white text-center rounded bg-dark">
-<h1 class="display-4 font-italic">10 Question Quiz:</h1>
+<h1 class="display-4 font-italic">5 Question Quiz:</h1>
 <h1 class="display-4 font-italic">{{ myObject.headline }}</h1>
 
 </div>
@@ -66,30 +66,8 @@
     <div class="col">
         <input type="text" class="form-control" id="q5">
     </div>
-    <div class="col">
-        <input type="text" class="form-control" id="q6">
-    </div>
 </div>
 
-
-<div class="row">
-    <div class="col">
-        <input type="text" class="form-control" id="q7">
-    </div>
-    <div class="col">
-        <input type="text" class="form-control" id="q8">
-    </div>
-</div>
-
-
-<div class="row">
-    <div class="col">
-        <input type="text" class="form-control" id="q9">
-    </div>
-    <div class="col">
-        <input type="text" class="form-control" id="q10">
-    </div>
-</div>
 
 
 <button class="btn btn-secondary" type="submit" onclick="revealFunction()">Reveal</button>
@@ -131,31 +109,6 @@
             document.getElementById("q5").style.borderColor = "green";
             document.getElementById("myInput").value = "";
         }
-        if (x == "{{ myObject.answers[5] }}") {
-            document.getElementById("q6").value = x;
-            document.getElementById("q6").style.borderColor = "green";
-            document.getElementById("myInput").value = "";
-        }
-        if (x == "{{ myObject.answers[6] }}") {
-            document.getElementById("q7").value = x;
-            document.getElementById("q7").style.borderColor = "green";
-            document.getElementById("myInput").value = "";
-        }
-        if (x == "{{ myObject.answers[7] }}") {
-            document.getElementById("q8").value = x;
-            document.getElementById("q8").style.borderColor = "green";
-            document.getElementById("myInput").value = "";
-        }
-        if (x == "{{ myObject.answers[8] }}") {
-            document.getElementById("q9").value = x;
-            document.getElementById("q9").style.borderColor = "green";
-            document.getElementById("myInput").value = "";
-        }
-        if (x == "{{ myObject.answers[9] }}") {
-            document.getElementById("q10").value = x;
-            document.getElementById("q10").style.borderColor = "green";
-            document.getElementById("myInput").value = "";
-        }
     }
 
 function revealFunction() {
@@ -169,16 +122,6 @@ function revealFunction() {
   reveal4.value = "{{ myObject.answers[3] }}";
   var reveal5 = document.getElementById("q5");
   reveal5.value = "{{ myObject.answers[4] }}";
-  var reveal6 = document.getElementById("q6");
-  reveal6.value = "{{ myObject.answers[5] }}";
-  var reveal7 = document.getElementById("q7");
-  reveal7.value = "{{ myObject.answers[6] }}";
-  var reveal8 = document.getElementById("q8");
-  reveal8.value = "{{ myObject.answers[7] }}";
-  var reveal9 = document.getElementById("q9");
-  reveal9.value = "{{ myObject.answers[8] }}";
-  var reveal10 = document.getElementById("q10");
-  reveal10.value = "{{ myObject.answers[9] }}";
   }
 </script>
 

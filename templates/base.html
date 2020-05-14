@@ -14,14 +14,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <!-- Favicons -->
-<link rel="apple-touch-icon" href="https://getbootstrap.com/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="https://getbootstrap.com/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="https://getbootstrap.com/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="https://getbootstrap.com/docs/4.4/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="https://getbootstrap.com/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
-<link rel="icon" href="https://getbootstrap.com/docs/4.4/assets/img/favicons/favicon.ico">
-<meta name="msapplication-config" content="https://getbootstrap.com/docs/4.4/assets/img/favicons/browserconfig.xml">
-<meta name="theme-color" content="#563d7c">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png"/>
+    <link rel="manifest" href="image/site.webmanifest"/>
 
 
     <style>
@@ -63,25 +60,19 @@
         <a class="text-muted" href="#" aria-label="Search">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24" focusable="false"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"/><path d="M21 21l-5.2-5.2"/></svg>
         </a>
-        <a class="btn btn-sm btn-outline-secondary" href="{{ url_for('signup') }}">Sign up</a>
       </div>
     </div>
   </header>
 
   <div class="nav-scroller py-1 mb-2">
     <nav class="nav d-flex justify-content-between">
-      <a class="p-2 text-muted" href="{{ url_for('general') }}">General</a>
-      <a class="p-2 text-muted" href="{{ url_for('mountains') }}">Mountains</a>
-      <a class="p-2 text-muted" href="{{ url_for('highlands') }}">Highlands</a>
-      <a class="p-2 text-muted" href="{{ url_for('cities') }}">Cities</a>
+      <a class="p-2 text-muted" href="{{ url_for('culture') }}">Culture</a>
+      <a class="p-2 text-muted" href="{{ url_for('general') }}">General Knowledge</a>
       <a class="p-2 text-muted" href="{{ url_for('geography') }}">Geography</a>
-      <a class="p-2 text-muted" href="{{ url_for('politics') }}">Politics</a>
+      <a class="p-2 text-muted" href="{{ url_for('highlands') }}">Highlands & Islands</a>
+      <a class="p-2 text-muted" href="{{ url_for('history') }}">History & Politics</a>
+      <a class="p-2 text-muted" href="{{ url_for('jumbo') }}">Jumbo Quizzes</a>
       <a class="p-2 text-muted" href="{{ url_for('sport') }}">Sport</a>
-      <a class="p-2 text-muted" href="{{ url_for('people') }}">People</a>
-      <a class="p-2 text-muted" href="{{ url_for('islands') }}">Islands</a>
-      <a class="p-2 text-muted" href="{{ url_for('history') }}">History</a>
-      <a class="p-2 text-muted" href="{{ url_for('jumbo') }}">Jumbo</a>
-      <a class="p-2 text-muted" href="{{ url_for('music') }}">Music</a>
     </nav>
   </div>
 

@@ -34,11 +34,23 @@ def picturequiz(quizName):
     myObject = getattr(quizzes, quizName)
     return render_template('picturequiz.html', quizName=quizName, myObject=myObject)
 
+@app.route("/picturequiz2/<quizName>")
+def picturequiz2(quizName):
+    import quizzes
+    myObject = getattr(quizzes, quizName)
+    return render_template('picturequiz2.html', quizName=quizName, myObject=myObject)
+
 @app.route("/mediumquiz/<quizName>")
 def mediumquiz(quizName):
     import quizzes
     myObject = getattr(quizzes, quizName)
     return render_template('mediumquiz.html', quizName=quizName, myObject=myObject)
+
+@app.route("/twelvequiz/<quizName>")
+def twelvequiz(quizName):
+    import quizzes
+    myObject = getattr(quizzes, quizName)
+    return render_template('twelvequiz.html', quizName=quizName, myObject=myObject)
 
 @app.route("/twentyquiz/<quizName>")
 def twentyquiz(quizName):
@@ -51,6 +63,12 @@ def tenquiz(quizName):
     import quizzes
     myObject = getattr(quizzes, quizName)
     return render_template('tenquiz.html', quizName=quizName, myObject=myObject)
+
+@app.route("/fivequiz/<quizName>")
+def fivequiz(quizName):
+    import quizzes
+    myObject = getattr(quizzes, quizName)
+    return render_template('fivequiz.html', quizName=quizName, myObject=myObject)
 
 @app.route("/shirequiz/<quizName>")
 def shirequiz(quizName):
@@ -78,10 +96,6 @@ def about():
 def sport():
     return render_template('sport.html')
 
-@app.route("/politics")
-def politics():
-    return render_template('politics.html')
-
 @app.route("/search")
 def search():
     return render_template('search.html')
@@ -89,10 +103,6 @@ def search():
 @app.route("/subscribe")
 def subscribe():
     return render_template('subscribe.html')
-
-@app.route("/signup")
-def signup():
-    return render_template('signup.html')
 
 @app.route("/geography")
 def geography():
@@ -118,21 +128,13 @@ def people():
 def history():
     return render_template('history.html')
 
-@app.route("/cities")
-def cities():
-    return render_template('cities.html')
-
-@app.route("/music")
-def music():
-    return render_template('music.html')
+@app.route("/culture")
+def culture():
+    return render_template('culture.html')
 
 @app.route("/jumbo")
 def jumbo():
     return render_template('jumbo.html')
-
-@app.route("/islands")
-def islands():
-    return render_template('islands.html')
 
 application = Flask(__name__)
 

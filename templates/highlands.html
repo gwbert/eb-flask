@@ -25,7 +25,7 @@
 
 <div class="jumbotron p-4 p-md-5 text-white text-center text-center rounded bg-dark">
     <div class="col-md-12 px-0">
-        <h1 class="display-4 font-italic">Highlands</h1>
+        <h1 class="display-4 font-italic">Highlands & Islands</h1>
     <p class="lead my-3">Take the high road here</p>
     </div>
   </div>
@@ -126,10 +126,7 @@
   
   </div>
 
-  <hr>
   <h2 class="display-5 text-center">Featured Quizzes</h2>
-  <hr>
-
 
     <!-- START THE FEATURETTES -->
 
@@ -199,6 +196,30 @@
     </div>
 
     <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Islay Distilleries. <span class="text-muted">All nine.</span></h2>
+        <p class="lead">How many do you know?</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <a href="{{ url_for('tenquiz', quizName='islayDistil') }}" class="stretched-link"></a>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="250" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><image href="https://www.svgrepo.com/show/258442/whisky-whiskey.svg"></image></svg>
+      </div>
+    </div>
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Busiest Ferry Routes. <span class="text-muted">Top Ten.</span></h2>
+        <p class="lead">How many do you know?</p>
+      </div>
+      <div class="col-md-5">
+        <a href="{{ url_for('twentyquiz', quizName='busyFerries') }}" class="stretched-link"></a>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="250" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><image href="https://www.svgrepo.com/show/162441/ferry.svg"></image></svg>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
     <!-- /END THE FEATURETTES -->
 
   <hr>
@@ -247,6 +268,49 @@
       </div>
     </div>
   </div> 
+
+  <div class="row mb-2">
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Highlands</strong>
+          <h3 class="mb-0">Name the place</h3>
+          <p class="card-text mb-auto">Abbreviations</p>
+          <a href="{{ url_for('smallquiz', quizName='highlandNameThePlace') }}" class="stretched-link btn-success">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Highlands</strong>
+          <h3 class="mb-0">Name the station</h3>
+          <p class="mb-auto">Far North Line</p>
+          <a href="{{ url_for('smallquiz', quizName='highlandFarNorthLine') }}" class="stretched-link btn-success">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Highlands</strong>
+          <h3 class="mb-0">Island Capitals</h3>
+          <p class="mb-auto">The Skye's the limit</p>
+          <a href="{{ url_for('smallquiz', quizName='islandCapitals') }}" class="stretched-link btn-success">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Highlands</strong>
+          <h3 class="mb-0">Visitor Attractions</h3>
+          <p class="mb-auto">Not just the NC500</p>
+          <a href="{{ url_for('smallquiz', quizName='nc500') }}" class="stretched-link btn-success">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+  </div> 
   
   <hr>
   <h2 class="display-5 text-center">Medium Quizzes</h2>
@@ -257,9 +321,9 @@
       <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
           <strong class="d-inline-block mb-2 ">Highlands</strong>
-          <h3 class="mb-0">Island Quiz</h3>
-          <p class="card-text mb-auto">Make sure to mull it over</p>
-          <a href="{{ url_for('mediumquiz', quizName='highlandIslands') }}" class="stretched-link btn-success">Take the quiz</a>
+          <h3 class="mb-0">Orkneys Quiz</h3>
+          <p class="card-text mb-auto">Can you name ten Orkney Isles?</p>
+          <a href="{{ url_for('mediumquiz', quizName='orkneyIslands') }}" class="stretched-link btn-success">Take the quiz</a>
         </div>
       </div>
     </div>
@@ -294,6 +358,50 @@
       </div>
     </div>
   </div> 
+
+  <div class="row mb-2">
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Highlands</strong>
+          <h3 class="mb-0">Highland Towns</h3>
+          <p class="card-text mb-auto">Abbreviations</p>
+          <a href="{{ url_for('mediumquiz', quizName='highlandNameThePlace') }}" class="stretched-link btn-success">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Highlands</strong>
+          <h3 class="mb-0">Shetland Islands</h3>
+          <p class="mb-auto">Can you name the 10 most populated?</p>
+          <a href="{{ url_for('tenquiz', quizName='shetlandPop') }}" class="stretched-link btn-success">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Highlands</strong>
+          <h3 class="mb-0">Orkney Islands</h3>
+          <p class="mb-auto">Can you name the 10 most populated?</p>
+          <a href="{{ url_for('tenquiz', quizName='orkneyPop') }}" class="stretched-link btn-success">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Highlands</strong>
+          <h3 class="mb-0">Name the Station</h3>
+          <p class="mb-auto">Far North Line</p>
+          <a href="{{ url_for('mediumquiz', quizName='highlandFarNorthLine') }}" class="stretched-link btn-success">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+  
   
   <hr>
   <h2 class="display-5 text-center">Picture Quizzes</h2>
@@ -324,9 +432,9 @@
       <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
           <strong class="d-inline-block mb-2 ">Highlands</strong>
-          <h3 class="mb-0">Highland Beaches</h3>
-          <p class="mb-auto">Cold</p>
-          <a href="{{ url_for('picturequiz', quizName='highlandBeaches') }}" class="stretched-link btn-success">Take the quiz</a>
+          <h3 class="mb-0">Highland Bridges</h3>
+          <p class="mb-auto">Spectacular</p>
+          <a href="{{ url_for('picturequiz', quizName='highlandBridges') }}" class="stretched-link btn-success">Take the quiz</a>
         </div>
       </div>
     </div>
@@ -341,6 +449,50 @@
       </div>
     </div>
   </div> 
+
+
+  <div class="row mb-2">
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Highlands</strong>
+          <h3 class="mb-0">Islands</h3>
+          <p class="card-text mb-auto">Smaller ones!</p>
+          <a href="{{ url_for('picturequiz', quizName='smallIslands') }}" class="stretched-link btn-success">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Highlands</strong>
+          <h3 class="mb-0">Lighthouses</h3>
+          <p class="mb-auto">See what's in Stoer for you</p>
+          <a href="{{ url_for('picturequiz', quizName='lighthouses') }}" class="stretched-link btn-success">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Highlands</strong>
+          <h3 class="mb-0">Orkney Islands</h3>
+          <p class="mb-auto">Name the island</p>
+          <a href="{{ url_for('picturequiz', quizName='orkneyIslands') }}" class="stretched-link btn-success">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Highlands</strong>
+          <h3 class="mb-0">Outer Hebrides</h3>
+          <p class="mb-auto">Name the island</p>
+          <a href="{{ url_for('picturequiz', quizName='nameTheHebrides') }}" class="stretched-link btn-success">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+  </div> 
   
   <hr>
   <h2 class="display-5 text-center">Jumbo Quizzes</h2>
@@ -351,9 +503,9 @@
       <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
           <strong class="d-inline-block mb-2 ">Highlands</strong>
-          <h3 class="mb-0">Island Quiz</h3>
-          <p class="card-text mb-auto">The Skye's the limit in our Island Capitals quiz</p>
-          <a href="{{ url_for('smallquiz', quizName='islandCapitals') }}" class="stretched-link btn-success">Take the quiz</a>
+          <h3 class="mb-0">Most Populous Islands</h3>
+          <p class="card-text mb-auto">Mull it over or seil straight through</p>
+          <a href="{{ url_for('jumboquiz', quizName='inhabitedIslands') }}" class="stretched-link btn-success">Take the quiz</a>
         </div>
       </div>
     </div>
@@ -361,9 +513,9 @@
       <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
           <strong class="d-inline-block mb-2 ">Highlands</strong>
-          <h3 class="mb-0">Highlands Quiz</h3>
-          <p class="mb-auto">Quiz quiz quiz</p>
-          <a href="" class="stretched-link btn-success">Take the quiz</a>
+          <h3 class="mb-0">Least Inhabited Islands</h3>
+          <p class="mb-auto">Rather difficult</p>
+          <a href="{{ url_for('jumboquiz', quizName='jumboLeastIslands') }}" class="stretched-link btn-success">Take the quiz</a>
         </div>
       </div>
     </div>
@@ -371,9 +523,9 @@
       <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
           <strong class="d-inline-block mb-2 ">Highlands</strong>
-          <h3 class="mb-0">Highlands Quiz</h3>
-          <p class="mb-auto">Quiz quiz quiz</p>
-          <a href="" class="stretched-link btn-success">Take the quiz</a>
+          <h3 class="mb-0">Largest Islands</h3>
+          <p class="mb-auto">Top 30</p>
+          <a href="{{ url_for('jumboquiz', quizName='jumboLargestIslands') }}" class="stretched-link btn-success">Take the quiz</a>
         </div>
       </div>
     </div>
@@ -381,9 +533,9 @@
       <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
           <strong class="d-inline-block mb-2 ">Highlands</strong>
-          <h3 class="mb-0">Highlands Quiz</h3>
-          <p class="mb-auto">Quiz quiz quiz</p>
-          <a href="" class="stretched-link btn-success">Take the quiz</a>
+          <h3 class="mb-0">Highest Islands</h3>
+          <p class="mb-auto">Top 30</p>
+          <a href="{{ url_for('jumboquiz', quizName='jumboHighestIslands') }}" class="stretched-link btn-success">Take the quiz</a>
         </div>
       </div>
     </div>

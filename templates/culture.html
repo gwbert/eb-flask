@@ -1,0 +1,515 @@
+{% extends "base.html" %}
+{% block content %}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<style>
+    /* Make the image fully responsive */
+    .carousel-inner img {
+        width: 100%;
+        height: 100%;
+    }
+    .jumbotron{
+  margin-top: 20px;
+  background-image: url("https://live.staticflickr.com/7346/27211780761_0d2d6b67ae_b.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 250px;
+}
+
+</style>
+
+<div class="jumbotron p-4 p-md-5 text-white text-center rounded bg-dark">
+    <div class="col-md-12 px-0">
+        <h1 class="display-4 font-italic">Culture</h1>
+    <p class="lead my-3">Custom is the great guide to human life</p>
+    </div>
+  </div>
+
+  <div id="demo" class="carousel slide" data-ride="carousel">
+
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+  
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row mb-2">
+            <div class="col-md-6">
+              <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 ">Culture</strong>
+                  <h3 class="mb-0">Name the band</h3>
+                          <p class="card-text mb-auto">Band from description</p>
+                  <a href="{{ url_for('smallquiz', quizName='nameTheBand') }}" class="stretched-link btn-info">Take the quiz</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 ">Culture</strong>
+                  <h3 class="mb-0">Bands by first abum</h3>
+                          <p class="mb-auto">Challenging!</p>
+                  <a href="{{ url_for('smallquiz', quizName='bandByAlbum') }}" class="stretched-link btn-info">Take the quiz</a>
+                </div>
+              </div>
+            </div>
+          </div>      </div>
+      <div class="carousel-item">
+        <div class="row mb-2">
+            <div class="col-md-6">
+              <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 ">Culture</strong>
+                  <h3 class="mb-0">Primal Scream Albums</h3>
+                          <p class="card-text mb-auto">Can you order them?</p>
+                  <a href="{{ url_for('smallquiz', quizName='primalScreamAlbums') }}" class="stretched-link btn-info">Take the quiz</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 ">Culture</strong>
+                  <h3 class="mb-0">Snow Patrol Albums</h3>
+                          <p class="mb-auto">Can you guess the order?</p>
+                  <a href="{{ url_for('smallquiz', quizName='snowPatrolAlbums') }}" class="stretched-link btn-info">Take the quiz</a>
+                </div>
+              </div>
+            </div>
+          </div>      </div>
+      <div class="carousel-item">
+        <div class="row mb-2">
+            <div class="col-md-6">
+              <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 ">Culture</strong>
+                  <h3 class="mb-0">Culture Venues</h3>
+                          <p class="card-text mb-auto">Can you guess these venues?</p>
+                  <a href="{{ url_for('picturequiz', quizName='cultureVenues') }}" class="stretched-link btn-info">Take the quiz</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 ">Culture</strong>
+                  <h3 class="mb-0">Scottish Songs</h3>
+                          <p class="mb-auto">Abbreviated</p>
+                  <a href="{{ url_for('mediumquiz', quizName='songsAbbreviated') }}" class="stretched-link btn-info">Take the quiz</a>
+                </div>
+              </div>
+            </div>
+          </div>      </div>
+    </div>
+  
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  
+  </div>
+
+  <h2 class="display-5 text-center">Featured Quizzes</h2>
+
+
+     <!-- START THE FEATURETTES -->
+
+     <hr class="featurette-divider">
+     <div class="row featurette">
+       <div class="col-md-7">
+         <h2 class="featurette-heading">Scottish Bands. <span class="text-muted"> At No.1.</span></h2>
+         <p class="lead">Abbreviations.</p>
+       </div>
+       <div class="col-md-5">
+         <a href="{{ url_for('mediumquiz', quizName='scottishNumberOneArtists') }}" class="stretched-link btn-warning"></a>
+         <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="250" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><image href="https://www.svgrepo.com/show/123381/guitar.svg"></svg>
+       </div>
+     </div>
+ 
+     <hr class="featurette-divider">
+ 
+     <div class="row featurette">
+       <div class="col-md-7 order-md-2">
+         <h2 class="featurette-heading">Scottish No. 1. <span class="text-muted">Singles.</span></h2>
+         <p class="lead">Abbreviations.</p>
+       </div>
+       <div class="col-md-5 order-md-1">
+         <a href="{{ url_for('mediumquiz', quizName='numberOneSingles') }}" class="stretched-link"></a>
+         <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="250" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><image href="https://www.svgrepo.com/show/10037/piano.svg"></image></svg>
+       </div>
+     </div>
+ 
+     <hr class="featurette-divider">
+ 
+     <div class="row featurette">
+       <div class="col-md-7">
+         <h2 class="featurette-heading">Scottish No. 1. <span class="text-muted">Singles.</span></h2>
+         <p class="lead">Missing Words</p>
+       </div>
+       <div class="col-md-5">
+         <a href="{{ url_for('mediumquiz', quizName='numberOneSinglesMissing') }}" class="stretched-link"></a>
+         <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="250" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><image href="https://www.svgrepo.com/show/164266/music.svg"></image></svg>
+       </div>
+     </div>
+ 
+     <hr class="featurette-divider">
+ 
+ 
+     <div class="row featurette">
+       <div class="col-md-7 order-md-2">
+         <h2 class="featurette-heading">The Proclaimers. <span class="text-muted">I'm gonna be.</span></h2>
+         <p class="lead">Lyrics</p>
+       </div>
+       <div class="col-md-5 order-md-1">
+         <a href="{{ url_for('twentyquiz', quizName='imGonnaBeLyrics') }}" class="stretched-link"></a>
+         <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="250" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><image href="https://www.svgrepo.com/show/171902/drums.svg"></image></svg>
+       </div>
+     </div>
+ 
+     <hr class="featurette-divider">
+ 
+     <div class="row featurette">
+       <div class="col-md-7">
+         <h2 class="featurette-heading">Flower of Scotland. <span class="text-muted">Lyrics.</span></h2>
+         <p class="lead">Do you actually know them?</p>
+       </div>
+       <div class="col-md-5">
+         <a href="{{ url_for('twentyquiz', quizName='auldLangSyne') }}" class="stretched-link"></a>
+         <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="250" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><image href="https://www.svgrepo.com/show/224512/fanfare-orchestra.svg"></image></svg>
+       </div>
+     </div>
+ 
+     <hr class="featurette-divider">
+     <!-- /END THE FEATURETTES -->
+ 
+     <hr>
+     <h2 class="display-5 text-center">Small Quizzes</h2>
+     <hr>
+
+  <div class="row mb-2">
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Culture</strong>
+          <h3 class="mb-0">Idlewild Albums</h3>
+          <p class="card-text mb-auto">First Five</p>
+          <a href="{{ url_for('smallquiz', quizName='idlewildAlbums') }}" class="stretched-link btn-info">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Culture</strong>
+          <h3 class="mb-0">Belle and Sebastian</h3>
+          <p class="mb-auto">Albums</p>
+          <a href="{{ url_for('smallquiz', quizName='bAndA') }}" class="stretched-link btn-info">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Culture</strong>
+          <h3 class="mb-0">Travis: The Man Who</h3>
+          <p class="mb-auto">Songs</p>
+          <a href="{{ url_for('tenquiz', quizName='theManWho') }}" class="stretched-link btn-info">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Culture</strong>
+          <h3 class="mb-0">Franz Ferdinand</h3>
+          <p class="mb-auto">Franz Ferdinand</p>
+          <a href="{{ url_for('tenquiz', quizName='franzFerdinand') }}" class="stretched-link btn-info">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+  <div class="row mb-2">
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Culture</strong>
+          <h3 class="mb-0">Writers</h3>
+          <p class="card-text mb-auto">Top Five</p>
+          <a href="{{ url_for('smallquiz', quizName='fiveWriters') }}" class="stretched-link btn-info">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Culture</strong>
+          <h3 class="mb-0">Actors</h3>
+          <p class="mb-auto">Who are they?</p>
+          <a href="{{ url_for('smallquiz', quizName='fiveActors') }}" class="stretched-link btn-info">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Culture</strong>
+          <h3 class="mb-0">Scottish Poets</h3>
+          <p class="mb-auto">Can you name them?</p>
+          <a href="{{ url_for('smallquiz', quizName='scottishPoets') }}" class="stretched-link btn-info">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Culture</strong>
+          <h3 class="mb-0">General Culture</h3>
+          <p class="mb-auto">Quick Five</p>
+          <a href="{{ url_for('smallquiz', quizName='cultureFive') }}" class="stretched-link btn-info">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+  
+  <hr>
+  <h2 class="display-5 text-center">Medium Quizzes</h2>
+  <hr>
+
+  <div class="row mb-2">
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Culture</strong>
+          <h3 class="mb-0">Travis Lyrics</h3>
+          <p class="card-text mb-auto">Why does it always rain on me</p>
+          <a href="{{ url_for('tenquiz', quizName='rainOnMe') }}" class="stretched-link btn-info">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Culture</strong>
+          <h3 class="mb-0">Snow Patrol Lyrics</h3>
+          <p class="mb-auto">Chasing cars</p>
+          <a href="{{ url_for('tenquiz', quizName='chasingCars') }}" class="stretched-link btn-info">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Culture</strong>
+          <h3 class="mb-0">Primal Scream Lyrics</h3>
+          <p class="mb-auto">Movin on up</p>
+          <a href="{{ url_for('twentyquiz', quizName='movinOnUp') }}" class="stretched-link btn-info">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Culture</strong>
+          <h3 class="mb-0">Primal Scream Lyrics</h3>
+          <p class="mb-auto">Loaded</p>
+          <a href="{{ url_for('twentyquiz', quizName='loaded') }}" class="stretched-link btn-info">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+  <div class="row mb-2">
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Culture</strong>
+          <h3 class="mb-0">Famous Scots</h3>
+          <p class="card-text mb-auto">Why does it always rain on me</p>
+          <a href="{{ url_for('mediumquiz', quizName='famousScots') }}" class="stretched-link btn-info">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Culture</strong>
+          <h3 class="mb-0">Scottish Films</h3>
+          <p class="mb-auto">Abbreviation</p>
+          <a href="{{ url_for('mediumquiz', quizName='scottishFilms') }}" class="stretched-link btn-info">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Culture</strong>
+          <h3 class="mb-0">Scottish Films</h3>
+          <p class="mb-auto">Directors</p>
+          <a href="{{ url_for('mediumquiz', quizName='filmDirectors') }}" class="stretched-link btn-info">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Culture</strong>
+          <h3 class="mb-0">Scottish Popular Culture</h3>
+          <p class="mb-auto">Official and Unofficial</p>
+          <a href="{{ url_for('mediumquiz', quizName='popCulture') }}" class="stretched-link btn-info">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+  <div class="row mb-2">
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Culture</strong>
+          <h3 class="mb-0">Whisky Trail</h3>
+          <p class="card-text mb-auto">Name the Distilleries</p>
+          <a href="{{ url_for('tenquiz', quizName='whiskyTrail') }}" class="stretched-link btn-info">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Culture</strong>
+          <h3 class="mb-0">Robert Louis Stevenson</h3>
+          <p class="mb-auto">Novels</p>
+          <a href="{{ url_for('tenquiz', quizName='rLS') }}" class="stretched-link btn-info">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Culture</strong>
+          <h3 class="mb-0">Walter Scott</h3>
+          <p class="mb-auto">Waverley Novels</p>
+          <a href="{{ url_for('jumboquiz', quizName='waverley') }}" class="stretched-link btn-info">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Culture</strong>
+          <h3 class="mb-0">Scots Language</h3>
+          <p class="mb-auto">Translation</p>
+          <a href="{{ url_for('mediumquiz', quizName='scotsLanguage') }}" class="stretched-link btn-info">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+  
+  <hr>
+  <h2 class="display-5 text-center">Picture Quizzes</h2>
+  <hr>
+
+  <div class="row mb-2">
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Culture</strong>
+          <h3 class="mb-0">Venues</h3>
+          <p class="card-text mb-auto">Guess the city</p>
+          <a href="{{ url_for('picturequiz', quizName='cultureVenues') }}" class="stretched-link btn-info">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Culture</strong>
+          <h3 class="mb-0">Festivals</h3>
+          <p class="mb-auto">Can you identify the festival</p>
+          <a href="{{ url_for('picturequiz', quizName='festivals') }}" class="stretched-link btn-info">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Culture</strong>
+          <h3 class="mb-0">Food</h3>
+          <p class="mb-auto">Deep fried Quiz</p>
+          <a href="{{ url_for('picturequiz', quizName='foods') }}" class="stretched-link btn-info">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Culture</strong>
+          <h3 class="mb-0">Golf Courses</h3>
+          <p class="mb-auto">Can you name them?</p>
+          <a href="{{ url_for('picturequiz', quizName='golf') }}" class="stretched-link btn-info">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+  
+  <hr>
+  <h2 class="display-5 text-center">Jumbo Quizzes</h2>
+  <hr>
+
+  <div class="row mb-2">
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Culture</strong>
+          <h3 class="mb-0">Tourist Attractions</h3>
+          <p class="card-text mb-auto">Most visited</p>
+          <a href="{{ url_for('twentyquiz', quizName='touristAttractions') }}" class="stretched-link btn-info">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Culture</strong>
+          <h3 class="mb-0">Scotland the Brave</h3>
+          <p class="mb-auto">Lyrics</p>
+          <a href="{{ url_for('twentyquiz', quizName='scotlandTheBrave') }}" class="stretched-link btn-info">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Culture</strong>
+          <h3 class="mb-0">Scottish No.1</h3>
+          <p class="mb-auto">Bands</p>
+          <a href="{{ url_for('twentyquiz', quizName='jumboNo1') }}" class="stretched-link btn-info">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 ">Culture</strong>
+          <h3 class="mb-0">Scottish No.1</h3>
+          <p class="mb-auto">Songs</p>
+          <a href="{{ url_for('twentyquiz', quizName='jumboSongs') }}" class="stretched-link btn-info">Take the quiz</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+{% endblock %}
