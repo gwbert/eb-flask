@@ -203,6 +203,10 @@ hflWinners = flexQuiz("clachnacuddin", "buckie thistle", "keith", "huntly", "bro
 hflGrounds = flexQuiz("keith", "forres mechanics", "buckie thistle", "huntly", "brora rangers", "fraserburgh", "rothes", "deveronvale", "wick academy", "nairn county", headline="Highland Football League", byline="Which current clubs have the most capacity?")
 hflMembers = flexQuiz("turiff united", "formartine united", "strathspey thistle", "inverurie loco works", "wick academy", headline="Highland Football League", byline="Can you name the five newest members?")
 hflFirst = flexQuiz("inverness thistle", "clachnacuddin", "caledonian", "clachnacuddin", "clachnacuddin", headline="Highland Football League", byline="Can you name the first five winners?")
+calcuttaYears = flexQuiz("2019", "2018", "2008", "2006", "2000", headline="Calcutta Cup Wins", byline="Which years were the past five Scottish Calcutta Cup wins?")
+tryScorers = flexQuiz("ian smith", "tony stanger", "chris paterson", "stuart hogg", "tommy seymour", "gavin hastings", "alan tait", "gregor townsend", "sean maitland", "iwan tukalo", headline="Scottish Try Scorers", byline="Can you name Scotland's 10 top try scorers?")
+rugbyPoints = flexQuiz("chris paterson", "greig laidlaw", "gavin hastings", "andy irvine", "dan parks", "kenny logan", "peter dods", "craig chalmers", "gregor townsend", "finn russell", headline="Most Points", byline="Can you name Scottish Rugby's highest scoring players?")
+mostCaps = flexQuiz("ross ford", "chris paterson", "sean lamont", "scott murray", "mike blair", "gregor townsend", "nathan hines", "jason white", "john barclay", "stuart hogg", headline="Most Caps", byline="Can you name Scotland's most capped rugby Union players")
 
 ## Highland Quizzes
 
