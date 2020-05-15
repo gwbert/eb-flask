@@ -46,6 +46,12 @@ def mediumquiz(quizName):
     myObject = getattr(quizzes, quizName)
     return render_template('mediumquiz.html', quizName=quizName, myObject=myObject)
 
+@app.route("/eightquiz/<quizName>")
+def eightquiz(quizName):
+    import quizzes
+    myObject = getattr(quizzes, quizName)
+    return render_template('eightquiz.html', quizName=quizName, myObject=myObject)
+
 @app.route("/twelvequiz/<quizName>")
 def twelvequiz(quizName):
     import quizzes
@@ -63,6 +69,12 @@ def tenquiz(quizName):
     import quizzes
     myObject = getattr(quizzes, quizName)
     return render_template('tenquiz.html', quizName=quizName, myObject=myObject)
+
+@app.route("/fifteenquiz/<quizName>")
+def fifteenquiz(quizName):
+    import quizzes
+    myObject = getattr(quizzes, quizName)
+    return render_template('fifteenquiz.html', quizName=quizName, myObject=myObject)
 
 @app.route("/fivequiz/<quizName>")
 def fivequiz(quizName):
