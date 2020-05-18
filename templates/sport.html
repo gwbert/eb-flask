@@ -49,7 +49,7 @@
                 <div class="col p-4 d-flex flex-column position-static">
                   <strong class="d-inline-block mb-2">Sport</strong>
                   <h3 class="mb-0">Scottish Football</h3>
-                  <p class="card-text mb-auto">Hall of fame inductees.</p>
+                  <p class="card-text mb-auto">Hall of fame inductees</p>
                   <a href="{{ url_for('fifteenquiz', quizName='footballHall') }}" class="stretched-link btn-dark">Take the quiz</a>
                 </div>
               </div>
@@ -72,7 +72,7 @@
                 <div class="col p-4 d-flex flex-column position-static">
                   <strong class="d-inline-block mb-2">Sport</strong>
                   <h3 class="mb-0">Scottish Football Grounds</h3>
-                  <p class="card-text mb-auto">By capacity.</p>
+                  <p class="card-text mb-auto">By capacity</p>
                   <a href="{{ url_for('tenquiz', quizName='spflGrounds') }}" class="stretched-link btn-dark">Take the quiz</a>
                 </div>
               </div>
@@ -157,12 +157,12 @@
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">Rugby. <span class="text-muted">Picture Quiz.</span></h2>
-        <p class="lead">Easy.</p>
+        <h2 class="featurette-heading">Football. <span class="text-muted">Most Goals.</span></h2>
+        <p class="lead">Scottish Domestic Football.</p>
       </div>
       <div class="col-md-5">
-        <a href="{{ url_for('smallquiz', quizName='hebrideanIsles') }}" class="stretched-link"></a>
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="250" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><image href="https://www.svgrepo.com/show/30529/rugby.svg"></image></svg>
+        <a href="{{ url_for('tenquiz', quizName='domesticMostGoals') }}" class="stretched-link"></a>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="250" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><image href="https://www.svgrepo.com/show/118187/football-shoes.svg"></image></svg>
       </div>
     </div>
 
@@ -171,11 +171,11 @@
 
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Snooker. <span class="text-muted">Quick five.</span></h2>
-        <p class="lead">Hendry's WC Final Opponents!</p>
+        <h2 class="featurette-heading">Lowland Football League. <span class="text-muted">Members.</span></h2>
+        <p class="lead">Can you name them all?</p>
       </div>
       <div class="col-md-5 order-md-1">
-        <a href="{{ url_for('fivequiz', quizName='hendryOpponents') }}" class="stretched-link"></a>
+        <a href="{{ url_for('sixteenquiz', quizName='lflMembers') }}" class="stretched-link"></a>
         <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="250" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><image href="https://www.svgrepo.com/show/60300/pool.svg"></image></svg>
       </div>
     </div>
@@ -216,9 +216,9 @@
     <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
       <div class="col p-4 d-flex flex-column position-static">
         <strong class="d-inline-block mb-2 ">Sport</strong>
-        <h3 class="mb-0">Scottish Football</h3>
-        <p class="mb-auto">Name the captain.</p>
-        <a href="" class="stretched-link btn-dark">Take the quiz</a>
+        <h3 class="mb-0">Scottish Cyclists</h3>
+        <p class="mb-auto">Name them</p>
+        <a href="{{ url_for('fivequiz', quizName='scottishCyclists') }}" class="stretched-link btn-dark">Take the quiz</a>
       </div>
     </div>
   </div>
@@ -226,9 +226,9 @@
     <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
       <div class="col p-4 d-flex flex-column position-static">
         <strong class="d-inline-block mb-2 ">Sport</strong>
-        <h3 class="mb-0">Scottish Athletics</h3>
-        <p class="mb-auto">Record holders.</p>
-        <a href="" class="stretched-link btn-dark">Take the quiz</a>
+        <h3 class="mb-0">Snooker</h3>
+        <p class="mb-auto">Crucible Winners</p>
+        <a href="{{ url_for('fivequiz', quizName='crucibleWinners') }}" class="stretched-link btn-dark">Take the quiz</a>
       </div>
     </div>
   </div>
@@ -236,9 +236,9 @@
     <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
       <div class="col p-4 d-flex flex-column position-static">
         <strong class="d-inline-block mb-2 ">Sport</strong>
-        <h3 class="mb-0">SPFL leading scorers</h3>
-        <p class="mb-auto">Quiz quiz quiz</p>
-        <a href="" class="stretched-link btn-dark">Take the quiz</a>
+        <h3 class="mb-0">Scottish National Football Team</h3>
+        <p class="mb-auto">Highest Scorers</p>
+        <a href="{{ url_for('fivequiz', quizName='nationalHighScorers') }}" class="stretched-link btn-dark">Take the quiz</a>
       </div>
     </div>
   </div>
@@ -250,7 +250,7 @@
       <div class="col p-4 d-flex flex-column position-static">
         <strong class="d-inline-block mb-2 ">Sport</strong>
         <h3 class="mb-0">Highland Football League</h3>
-        <p class="card-text mb-auto">Newest Members.</p>
+        <p class="card-text mb-auto">Newest Members</p>
         <a href="{{ url_for('fivequiz', quizName='hflMembers') }}" class="stretched-link btn-dark">Take the quiz</a>
       </div>
     </div>
@@ -269,9 +269,9 @@
     <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
       <div class="col p-4 d-flex flex-column position-static">
         <strong class="d-inline-block mb-2 ">Sport</strong>
-        <h3 class="mb-0">Scottish Athletics</h3>
-        <p class="mb-auto">Record holders.</p>
-        <a href="" class="stretched-link btn-dark">Take the quiz</a>
+        <h3 class="mb-0">Scottish Football Cup</h3>
+        <p class="mb-auto">Most Wins</p>
+        <a href="{{ url_for('fivequiz', quizName='cupWins') }}" class="stretched-link btn-dark">Take the quiz</a>
       </div>
     </div>
   </div>
@@ -279,9 +279,52 @@
     <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
       <div class="col p-4 d-flex flex-column position-static">
         <strong class="d-inline-block mb-2 ">Sport</strong>
-        <h3 class="mb-0">SPFL leading scorers</h3>
-        <p class="mb-auto">Quiz quiz quiz</p>
-        <a href="" class="stretched-link btn-dark">Take the quiz</a>
+        <h3 class="mb-0">Scottish Football Cup</h3>
+        <p class="mb-auto">Most Runners Up</p>
+        <a href="{{ url_for('fivequiz', quizName='cupRunnersUp') }}" class="stretched-link btn-dark">Take the quiz</a>
+      </div>
+    </div>
+  </div>
+</div> 
+
+<div class="row mb-2">
+  <div class="col-md-3">
+    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+      <div class="col p-4 d-flex flex-column position-static">
+        <strong class="d-inline-block mb-2 ">Sport</strong>
+        <h3 class="mb-0">Horse Racing</h3>
+        <p class="card-text mb-auto">Scottish Race Courses</p>
+        <a href="{{ url_for('fivequiz', quizName='nameTheRacecourses') }}" class="stretched-link btn-dark">Take the quiz</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+      <div class="col p-4 d-flex flex-column position-static">
+        <strong class="d-inline-block mb-2 ">Sport</strong>
+        <h3 class="mb-0">Katherine Grainger</h3>
+        <p class="mb-auto">Olympic Medals</p>
+        <a href="{{ url_for('fivequiz', quizName='kGrainger') }}" class="stretched-link btn-dark">Take the quiz</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+      <div class="col p-4 d-flex flex-column position-static">
+        <strong class="d-inline-block mb-2 ">Sport</strong>
+        <h3 class="mb-0">Most Successful Olympians</h3>
+        <p class="mb-auto">Can you name them?</p>
+        <a href="{{ url_for('fivequiz', quizName='mostSuccessfulOlympians') }}" class="stretched-link btn-dark">Take the quiz</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+      <div class="col p-4 d-flex flex-column position-static">
+        <strong class="d-inline-block mb-2 ">Sport</strong>
+        <h3 class="mb-0">Scottish Football Champions</h3>
+        <p class="mb-auto">Outside The Top Two</p>
+        <a href="{{ url_for('fivequiz', quizName='nonBigTwo') }}" class="stretched-link btn-dark">Take the quiz</a>
       </div>
     </div>
   </div>
@@ -296,9 +339,9 @@
     <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
       <div class="col p-4 d-flex flex-column position-static">
         <strong class="d-inline-block mb-2 ">Sport</strong>
-        <h3 class="mb-0">SPFL Records</h3>
-        <p class="card-text mb-auto">What, no Henrik Larsson?</p>
-        <a href="{{ url_for('smallquiz', quizName='islandCapitals') }}" class="stretched-link btn-dark">Take the quiz</a>
+        <h3 class="mb-0">SPFL Ground Sizes</h3>
+        <p class="card-text mb-auto">Difficult!</p>
+        <a href="{{ url_for('mediumquiz', quizName='spflGroundSize') }}" class="stretched-link btn-dark">Take the quiz</a>
       </div>
     </div>
   </div>
@@ -359,9 +402,9 @@
     <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
       <div class="col p-4 d-flex flex-column position-static">
         <strong class="d-inline-block mb-2 ">Sport</strong>
-        <h3 class="mb-0">Scottish Rugby, five nations</h3>
-        <p class="mb-auto">Quiz quiz quiz</p>
-        <a href="" class="stretched-link btn-dark">Take the quiz</a>
+        <h3 class="mb-0">Football</h3>
+        <p class="mb-auto">Scotland at the WC</p>
+        <a href="{{ url_for('eightquiz', quizName='worldCup') }}" class="stretched-link btn-dark">Take the quiz</a>
       </div>
     </div>
   </div>
@@ -369,9 +412,9 @@
     <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
       <div class="col p-4 d-flex flex-column position-static">
         <strong class="d-inline-block mb-2 ">Sport</strong>
-        <h3 class="mb-0">Non SPFL football grounds</h3>
-        <p class="mb-auto">No Celtic Park here.</p>
-        <a href="" class="stretched-link btn-dark">Take the quiz</a>
+        <h3 class="mb-0">Scottish National Football Team</h3>
+        <p class="mb-auto">Most Caps</p>
+        <a href="{{ url_for('tenquiz', quizName='footballMostCaps') }}" class="stretched-link btn-dark">Take the quiz</a>
       </div>
     </div>
   </div>
@@ -386,9 +429,9 @@
     <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
       <div class="col p-4 d-flex flex-column position-static">
         <strong class="d-inline-block mb-2 ">Sport</strong>
-        <h3 class="mb-0">Scottish Olympians</h3>
-        <p class="card-text mb-auto"></p>
-        <a href="{{ url_for('smallquiz', quizName='islandCapitals') }}" class="stretched-link btn-dark">Take the quiz</a>
+        <h3 class="mb-0">Golf Courses</h3>
+        <p class="card-text mb-auto">Picture Quiz</p>
+        <a href="{{ url_for('picturequiz', quizName='golf') }}" class="stretched-link btn-dark">Take the quiz</a>
       </div>
     </div>
   </div>
@@ -396,9 +439,9 @@
     <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
       <div class="col p-4 d-flex flex-column position-static">
         <strong class="d-inline-block mb-2 ">Sport</strong>
-        <h3 class="mb-0">Chirs Hoy</h3>
-        <p class="mb-auto">The wee man deserves a quiz.</p>
-        <a href="" class="stretched-link btn-dark">Take the quiz</a>
+        <h3 class="mb-0">Football Stadiums</h3>
+        <p class="mb-auto">Picture Quiz</p>
+        <a href="{{ url_for('picturequiz', quizName='nameTheGround') }}" class="stretched-link btn-dark">Take the quiz</a>
       </div>
     </div>
   </div>
@@ -406,9 +449,9 @@
     <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
       <div class="col p-4 d-flex flex-column position-static">
         <strong class="d-inline-block mb-2 ">Sport</strong>
-        <h3 class="mb-0">Murray</h3>
-        <p class="mb-auto">In a class of his own.</p>
-        <a href="" class="stretched-link btn-dark">Take the quiz</a>
+        <h3 class="mb-0">Sporting Arenas</h3>
+        <p class="mb-auto">Picture Quiz</p>
+        <a href="{{ url_for('picturequiz', quizName='sportingArenas') }}" class="stretched-link btn-dark">Take the quiz</a>
       </div>
     </div>
   </div>
@@ -416,9 +459,9 @@
     <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
       <div class="col p-4 d-flex flex-column position-static">
         <strong class="d-inline-block mb-2 ">Sport</strong>
-        <h3 class="mb-0">Golfers</h3>
-        <p class="mb-auto">Will you get a hole in one?</p>
-        <a href="" class="stretched-link btn-dark">Take the quiz</a>
+        <h3 class="mb-0">Scottish Sports</h3>
+        <p class="mb-auto">Name the sport</p>
+        <a href="{{ url_for('picturequiz', quizName='scotSports') }}" class="stretched-link btn-dark">Take the quiz</a>
       </div>
     </div>
   </div>
@@ -429,9 +472,9 @@
     <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
       <div class="col p-4 d-flex flex-column position-static">
         <strong class="d-inline-block mb-2 ">Sport</strong>
-        <h3 class="mb-0">Scottish Olympians</h3>
-        <p class="card-text mb-auto"></p>
-        <a href="{{ url_for('smallquiz', quizName='islandCapitals') }}" class="stretched-link btn-dark">Take the quiz</a>
+        <h3 class="mb-0">Highland Football League</h3>
+        <p class="card-text mb-auto">Guess the club</p>
+        <a href="{{ url_for('picturequiz', quizName='hflTowns') }}" class="stretched-link btn-dark">Take the quiz</a>
       </div>
     </div>
   </div>
@@ -439,9 +482,9 @@
     <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
       <div class="col p-4 d-flex flex-column position-static">
         <strong class="d-inline-block mb-2 ">Sport</strong>
-        <h3 class="mb-0">Chirs Hoy</h3>
-        <p class="mb-auto">The wee man deserves a quiz.</p>
-        <a href="" class="stretched-link btn-dark">Take the quiz</a>
+        <h3 class="mb-0">Football Stadiums II</h3>
+        <p class="mb-auto">Picture Quiz</p>
+        <a href="{{ url_for('picturequiz', quizName='stadiumsII') }}" class="stretched-link btn-dark">Take the quiz</a>
       </div>
     </div>
   </div>
@@ -449,9 +492,9 @@
     <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
       <div class="col p-4 d-flex flex-column position-static">
         <strong class="d-inline-block mb-2 ">Sport</strong>
-        <h3 class="mb-0">Murray</h3>
-        <p class="mb-auto">In a class of his own.</p>
-        <a href="" class="stretched-link btn-dark">Take the quiz</a>
+        <h3 class="mb-0">Race Courses</h3>
+        <p class="mb-auto">Can you name them?</p>
+        <a href="{{ url_for('picturequiz', quizName='raceCourses') }}" class="stretched-link btn-dark">Take the quiz</a>
       </div>
     </div>
   </div>
@@ -459,9 +502,9 @@
     <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
       <div class="col p-4 d-flex flex-column position-static">
         <strong class="d-inline-block mb-2 ">Sport</strong>
-        <h3 class="mb-0">Golfers</h3>
-        <p class="mb-auto">Will you get a hole in one?</p>
-        <a href="" class="stretched-link btn-dark">Take the quiz</a>
+        <h3 class="mb-0">Ski Areas</h3>
+        <p class="mb-auto">Picture Quiz</p>
+        <a href="{{ url_for('picturequiz', quizName='skiAreaPictures') }}" class="stretched-link btn-dark">Take the quiz</a>
       </div>
     </div>
   </div>
@@ -476,9 +519,9 @@
     <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
       <div class="col p-4 d-flex flex-column position-static">
         <strong class="d-inline-block mb-2 ">Sport</strong>
-        <h3 class="mb-0">Scottish Golf venues</h3>
-        <p class="card-text mb-auto">Make Scotland great again.</p>
-        <a href="{{ url_for('smallquiz', quizName='islandCapitals') }}" class="stretched-link btn-dark">Take the quiz</a>
+        <h3 class="mb-0">Highland Football League</h3>
+        <p class="card-text mb-auto">Winners</p>
+        <a href="{{ url_for('fifteenquiz', quizName='hflJumboWinners') }}" class="stretched-link btn-dark">Take the quiz</a>
       </div>
     </div>
   </div>
@@ -486,9 +529,9 @@
     <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
       <div class="col p-4 d-flex flex-column position-static">
         <strong class="d-inline-block mb-2 ">Sport</strong>
-        <h3 class="mb-0">Scottish Drivers</h3>
-        <p class="mb-auto">F1, Rallying, it's all here.</p>
-        <a href="" class="stretched-link btn-dark">Take the quiz</a>
+        <h3 class="mb-0">Celtic Captains</h3>
+        <p class="mb-auto">First 30</p>
+        <a href="{{ url_for('jumboquiz', quizName='celticCaptains') }}" class="stretched-link btn-dark">Take the quiz</a>
       </div>
     </div>
   </div>
@@ -496,9 +539,9 @@
     <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
       <div class="col p-4 d-flex flex-column position-static">
         <strong class="d-inline-block mb-2 ">Sport</strong>
-        <h3 class="mb-0">Highland Games</h3>
-        <p class="mb-auto">Name the sport.</p>
-        <a href="" class="stretched-link btn-dark">Take the quiz</a>
+        <h3 class="mb-0">Rangers Captains</h3>
+        <p class="mb-auto">First 30</p>
+        <a href="{{ url_for('jumboquiz', quizName='rangersCaptains') }}" class="stretched-link btn-dark">Take the quiz</a>
       </div>
     </div>
   </div>
@@ -506,9 +549,9 @@
     <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
       <div class="col p-4 d-flex flex-column position-static">
         <strong class="d-inline-block mb-2 ">Sport</strong>
-        <h3 class="mb-0">Name the (football) player</h3>
-        <p class="mb-auto">Alan, Kenny?</p>
-        <a href="" class="stretched-link btn-dark">Take the quiz</a>
+        <h3 class="mb-0">Scottish National Football Team</h3>
+        <p class="mb-auto">Managers</p>
+        <a href="{{ url_for('twentyquiz', quizName='footballManagers') }}" class="stretched-link btn-dark">Take the quiz</a>
       </div>
     </div>
   </div>
@@ -519,9 +562,9 @@
     <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
       <div class="col p-4 d-flex flex-column position-static">
         <strong class="d-inline-block mb-2 ">Sport</strong>
-        <h3 class="mb-0">Hendry's Crucible opponents</h3>
-        <p class="card-text mb-auto">Not as easy as you think.</p>
-        <a href="{{ url_for('smallquiz', quizName='islandCapitals') }}" class="stretched-link btn-dark">Take the quiz</a>
+        <h3 class="mb-0">Lowland Football League</h3>
+        <p class="card-text mb-auto">Current Clubs</p>
+        <a href="{{ url_for('sixteenquiz', quizName='lflMembers') }}" class="stretched-link btn-dark">Take the quiz</a>
       </div>
     </div>
   </div>
@@ -529,9 +572,9 @@
     <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
       <div class="col p-4 d-flex flex-column position-static">
         <strong class="d-inline-block mb-2 ">Sport</strong>
-        <h3 class="mb-0">Scottish Football's WC exits.</h3>
-        <p class="mb-auto">Relive the pain.</p>
-        <a href="" class="stretched-link btn-dark">Take the quiz</a>
+        <h3 class="mb-0">2019-20, SPFL Top 3 divisions</h3>
+        <p class="mb-auto">Name the clubs</p>
+        <a href="{{ url_for('shirequiz', quizName='spfl3Div') }}" class="stretched-link btn-dark">Take the quiz</a>
       </div>
     </div>
   </div>
@@ -539,9 +582,9 @@
     <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
       <div class="col p-4 d-flex flex-column position-static">
         <strong class="d-inline-block mb-2 ">Sport</strong>
-        <h3 class="mb-0">Football - nicknames</h3>
-        <p class="mb-auto">Cattachs anyone?</p>
-        <a href="" class="stretched-link btn-dark">Take the quiz</a>
+        <h3 class="mb-0"> 2019-20 SPFL non-Premiership clubs</h3>
+        <p class="mb-auto">Name the clubs</p>
+        <a href="{{ url_for('jumboquiz', quizName='nonPremClubs') }}" class="stretched-link btn-dark">Take the quiz</a>
       </div>
     </div>
   </div>
@@ -549,9 +592,9 @@
     <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
       <div class="col p-4 d-flex flex-column position-static">
         <strong class="d-inline-block mb-2 ">Sport</strong>
-        <h3 class="mb-0">Highland Football League</h3>
-        <p class="mb-auto">Name the founders</p>
-        <a href="" class="stretched-link btn-dark">Take the quiz</a>
+        <h3 class="mb-0">Scottish Women's Premier League I & II</h3>
+        <p class="mb-auto">Name the clubs</p>
+        <a href="{{ url_for('sixteenquiz', quizName='swplOneAndTwo') }}" class="stretched-link btn-dark">Take the quiz</a>
       </div>
     </div>
   </div>
