@@ -51,14 +51,11 @@
   <header class="blog-header py-3">
     <div class="row flex-nowrap justify-content-between align-items-center">
       <div class="col-4 pt-1">
-        <a class="text-muted" href="{{ url_for('subscribe') }}">Subscribe</a>
       </div>
       <div class="col-4 text-center">
         <a class="blog-header-logo text-dark" href="{{ url_for('index') }}">WeeQuiz</a>
       </div>
       <div class="col-4 d-flex justify-content-end align-items-center">
-        <a class="text-muted" href="#" aria-label="Search">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24" focusable="false"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"/><path d="M21 21l-5.2-5.2"/></svg>
         </a>
       </div>
     </div>
@@ -80,38 +77,13 @@
 
   {% endblock %}
 
- 
-<footer class="container py-5">
-  <div class="row">
-    <div class="col-12 col-md">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
-      <small class="d-block mb-3 text-muted">&copy; 2020</small>
-    </div>
-    <div class="col-6 col-md">
-      <h5>About</h5>
-      <ul class="list-unstyled text-small">
-        <li><a class="text-muted" href="#">The Team</a></li>
-      </ul>
-    </div>
-    <div class="col-6 col-md">
-      <h5>Technology</h5>
-      <ul class="list-unstyled text-small">
-        <li><a class="text-muted" href="#">Developing WeeQuiz</a></li>
-      </ul>
-    </div>
-    <div class="col-6 col-md">
-      <h5>Suggestions</h5>
-      <ul class="list-unstyled text-small">
-        <li><a class="text-muted" href="#">Here</a></li>
-      </ul>
-    </div>
-    <div class="col-6 col-md">
-      <h5>Other</h5>
-      <ul class="list-unstyled text-small">
-        <li><a class="text-muted" href="#">Errata</a></li>
-      </ul>
-    </div>
-  </div>
-</footer>
+  <footer class="text-muted">
+    <div class="container">
+      <p class="text-center">
+        <a href="#">Back to top</a>
+      </p>
+      </div>
+    </footer>
+
   </body>
   </html>

@@ -40,6 +40,12 @@ def picturequiz2(quizName):
     myObject = getattr(quizzes, quizName)
     return render_template('picturequiz2.html', quizName=quizName, myObject=myObject)
 
+@app.route("/picturequiz3/<quizName>")
+def picturequiz3(quizName):
+    import quizzes
+    myObject = getattr(quizzes, quizName)
+    return render_template('picturequiz3.html', quizName=quizName, myObject=myObject)
+
 @app.route("/mediumquiz/<quizName>")
 def mediumquiz(quizName):
     import quizzes
