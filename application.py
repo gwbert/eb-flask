@@ -116,6 +116,10 @@ def footballquiz(quizName):
 def about():
     return render_template('about.html')
 
+@app.route("/blog")
+def blog():
+    return render_template('blog.html')
+
 @app.route("/sport")
 def sport():
     return render_template('sport.html')
@@ -163,4 +167,4 @@ def jumbo():
 application = Flask(__name__)
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)

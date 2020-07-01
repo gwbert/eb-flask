@@ -51,12 +51,13 @@
   <header class="blog-header py-3">
     <div class="row flex-nowrap justify-content-between align-items-center">
       <div class="col-4 pt-1">
+        <a class="text-muted" href="{{ url_for('blog') }}">Blog</a>
       </div>
       <div class="col-4 text-center">
         <a class="blog-header-logo text-dark" href="{{ url_for('index') }}">WeeQuiz</a>
       </div>
       <div class="col-4 d-flex justify-content-end align-items-center">
-        </a>
+        <a class="text-muted" href="{{ url_for('about') }}">About</a>
       </div>
     </div>
   </header>
@@ -80,6 +81,7 @@
   <footer class="text-muted">
     <div class="container">
       <p class="text-center">
+        <p>Love Welsh trivia? Visit our sister site: <a href="https://www.welshquizzes.com">welshquizzes.com</a></p>
         <a href="#">Back to top</a>
       </p>
       </div>
