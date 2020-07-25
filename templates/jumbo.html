@@ -26,9 +26,12 @@
 
 <div class="jumbotron p-4 p-md-5 text-white text-center rounded bg-dark">
     <div class="col-md-12 px-0">
-        <h1 class="display-4 font-italic">Jumbo Quizzes</h1>
-    <p class="lead my-3">Settle in to a Jumbo Quiz here.</p>
     </div>
+  </div>
+
+  <div class="container text-center">
+    <h1 class="display-4 font-italic">Jumbo Quizzes</h1>
+    <p class="lead my-3">Whether its naming all the Scottish Counties or identifying the 30 most populous Scottish islands, try your hand at one of our Jumbo Quizzes.</p>
   </div>
 
   <hr>
@@ -39,9 +42,21 @@
 
     <hr class="featurette-divider">
     <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Scottish Counties. <span class="text-muted">Name them all.</span></h2>
+        <p class="lead">Map-based quiz</p>
+      </div>
+      <div class="col-md-5">
+        <a href="{{ url_for('counties') }}" class="stretched-link btn-warning"></a>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="250" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><image href="https://www.svgrepo.com/show/155361/scotland.svg"></svg>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+    <div class="row featurette">
       <div class="col-md-7">
         <h2 class="featurette-heading">Scottish Councils. <span class="text-muted">All 32.</span></h2>
-        <p class="lead">How many can you name?</p>
+        <p class="lead">Non map-based quiz</p>
       </div>
       <div class="col-md-5">
         <a href="{{ url_for('shirequiz', quizName='councils') }}" class="stretched-link btn-warning"></a>

@@ -1,0 +1,371 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+
+<style>
+    #quizbox {
+        border: solid;
+        border-width: 1px;
+    } 
+    #mapid { 
+      height: 1080px; 
+    }
+    .jumbotron{
+  margin-top: 20px;
+  background-image: url("https://live.staticflickr.com/316/31458698403_fc30f02820_b.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 250px;
+}
+</style>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+   <script type="text/javascript" src="static/js/aberdeencity.js"></script>
+   <script type="text/javascript" src="static/js/aberdeenshire.js"></script>
+   <script type="text/javascript" src="static/js/angus.js"></script>
+   <script type="text/javascript" src="static/js/argyllbute.js"></script>
+   <script type="text/javascript" src="static/js/clackmannanshire.js"></script>
+   <script type="text/javascript" src="static/js/dumfries.js"></script>
+   <script type="text/javascript" src="static/js/dundeeCity.js"></script>
+   <script type="text/javascript" src="static/js/eastayrshire.js"></script>
+   <script type="text/javascript" src="static/js/edinburghcity.js"></script>
+   <script type="text/javascript" src="static/js/eileansiar.js"></script>
+   <script type="text/javascript" src="static/js/eastdunbartonshire.js"></script>
+   <script type="text/javascript" src="static/js/eastlothian.js"></script>
+   <script type="text/javascript" src="static/js/eastrenfrewshire.js"></script>
+   <script type="text/javascript" src="static/js/falkirk.js"></script>
+   <script type="text/javascript" src="static/js/fife.js"></script>
+   <script type="text/javascript" src="static/js/glasgowcity.js"></script>
+   <script type="text/javascript" src="static/js/highland.js"></script>
+   <script type="text/javascript" src="static/js/inverclyde.js"></script>
+   <script type="text/javascript" src="static/js/midlothian.js"></script>
+   <script type="text/javascript" src="static/js/moray.js"></script>
+   <script type="text/javascript" src="static/js/northayrshire.js"></script>
+   <script type="text/javascript" src="static/js/northlanarkshire.js"></script>
+   <script type="text/javascript" src="static/js/orkney.js"></script>
+   <script type="text/javascript" src="static/js/perthkinross.js"></script>
+   <script type="text/javascript" src="static/js/renfrewshire.js"></script>
+   <script type="text/javascript" src="static/js/scottishborders.js"></script>
+   <script type="text/javascript" src="static/js/shetland.js"></script>
+   <script type="text/javascript" src="static/js/southayrshire.js"></script>
+   <script type="text/javascript" src="static/js/southlanarkshire.js"></script>
+   <script type="text/javascript" src="static/js/stirling.js"></script>
+   <script type="text/javascript" src="static/js/westDunbartonshire.js"></script>
+   <script type="text/javascript" src="static/js/westLothian.js"></script>
+
+
+<main role="main" class="container text-center">
+  <div class="jumbotron">
+  </div>
+
+  <div class="container">
+    <h1>Scottish Council Areas</h1>
+    <p class="lead">Can you name all 32 current Scottish council areas?</p>
+    <h3 id="count">0</h3>
+    <p></p>
+  </div>
+
+  <div class="container">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">Answers:</span>
+        </div>
+        <input type="text" id="myInput" oninput="myFunction()" class="form-control" placeholder="Enter your answers here" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+    </div>
+
+    <div id="mapid"></div>
+    <p></p>
+
+</div>
+
+<script>
+var map = L.map('mapid', {
+    center: [58.02, -4.4],
+    zoom: 7,
+    dragging: false,
+    minZoom: 7,
+    maxZoom: 7
+});
+
+var correct = {
+  "color": '#0033cc',
+  "fillOpacity": 1
+}
+
+L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain-background/{z}/{x}/{y}{r}.{ext}', {foo: 'bar', attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors', ext: 'png'}).addTo(map);
+
+var count = 0;
+
+function myFunction() {
+        var x = document.getElementById("myInput").value;
+        var x = x.toLowerCase();
+        if (x == "aberdeenshire") {
+          L.geoJSON(aberdeenshire, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "city of aberdeen") {
+          L.geoJSON(aberdeenCity, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "argyll and bute") {
+          L.geoJSON(argyllBute, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "angus") {
+          L.geoJSON(angus, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "dundee city") {
+          L.geoJSON(dundeeCity, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "glasgow city") {
+          L.geoJSON(glasgowCity, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "city of edinburgh") {
+          L.geoJSON(edinburghCity, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "clackmannanshire") {
+          L.geoJSON(clackmannanshire, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "dumfries and galloway") {
+          L.geoJSON(dumfries, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "east ayrshire") {
+          L.geoJSON(eastAyrshire, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "east dunbartonshire") {
+          L.geoJSON(eastDunbartonshire, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "east lothian") {
+          L.geoJSON(eastLothian, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "east renfrewshire") {
+          L.geoJSON(eastRenfrewshire, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "eilean siar") {
+          L.geoJSON(eileanSiar, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "falkirk") {
+          L.geoJSON(falkirk, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "fife") {
+          L.geoJSON(fife, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "highland") {
+          L.geoJSON(highland, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "inverclyde") {
+          L.geoJSON(inverclyde, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "south lanarkshire") {
+          L.geoJSON(southLanarkshire, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "midlothian") {
+          L.geoJSON(midlothian, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "moray") {
+          L.geoJSON(moray, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "north ayrshire") {
+          L.geoJSON(northAyrshire, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "north lanarkshire") {
+          L.geoJSON(northLanarkshire, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "orkney") {
+          L.geoJSON(orkney, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "perth and kinross") {
+          L.geoJSON(perthKinross, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "renfrewshire") {
+          L.geoJSON(renfrewshire, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "scottish borders") {
+          L.geoJSON(scottishBorders, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "shetland") {
+          L.geoJSON(shetland, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "south ayrshire") {
+          L.geoJSON(southAyrshire, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "stirling") {
+          L.geoJSON(stirling, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "west lothian") {
+          L.geoJSON(westLothian, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "west dunbartonshire") {
+          L.geoJSON(westDunbartonshire, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+    }
+
+</script>
+  
+
+
+{% endblock %}

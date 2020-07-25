@@ -8,7 +8,7 @@
         border-width: 1px;
     } 
     .jumbotron {
-      background-image: url("https://farm8.staticflickr.com/7421/13787234775_0aeb271d27_b.jpg");
+      background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/59/Nederland_tegen_Schotland_0-0._Keeper_Clark_stopt_schot_van_Van_der_Kuylen%2C_Bestanddeelnr_921-4038.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -19,13 +19,13 @@
 </style>
 
 <div class="jumbotron p-4 p-md-5 text-white text-center rounded bg-dark">
-  <h1 class="display-4 font-italic">Quiz:</h1>
-  <h1 class="display-4 font-italic">{{ myObject.headline }}</h1>
 
 </div>
-</div>
+
 <div class="container text-center">
-<p class="lead my-3">{{ myObject.byline }}</p>
+  <h1 class="display-4 font-italic">Fiendish Football Quiz:</h1>
+  <h1 class="display-4 font-italic">{{ myObject.headline }}</h1>
+  <p class="lead my-3">{{ myObject.byline }}</p>
 </div>
 
 <div class="container" id="quizbox">
@@ -164,9 +164,10 @@
                                                   </div>
 
   </form>
-  <button class="btn btn-primary" type="submit" onclick="myFunction()">Submit</button>
-  <button class="btn btn-secondary" type="submit" onclick="revealFunction()">Reveal</button>
-  <hr>
+  <div class="container text-center">
+  <button class="btn btn-outline-primary" type="submit" onclick="myFunction()">Submit</button>
+  <button class="btn btn-outline-secondary" type="submit" onclick="revealFunction()">Reveal</button>
+</div>
   <p id="reveal"></p>
   <p id="score"></p>
 </div>

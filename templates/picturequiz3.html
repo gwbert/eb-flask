@@ -31,13 +31,11 @@
 </style>
 
 
-<div class="jumbotron p-4 p-md-5 text-white text-center rounded bg-dark">
-<h1 class="display-4 font-italic">Picture quiz:</h1>
-<h1 class="display-4 font-italic">{{ myObject.headline }}</h1>
-
-</div>
+<div class="jumbotron p-4 p-md-5">
 </div>
 <div class="container text-center">
+<h1 class="display-4 font-italic">Picture quiz:</h1>
+<h1 class="display-4 font-italic">{{ myObject.headline }}</h1>
 <p class="lead my-3">{{ myObject.byline }}</p>
 </div>
 
@@ -128,11 +126,9 @@
 
         <div class="container">
         <button class="btn btn-primary" type="submit" onclick="myFunction()">Submit</button>
-        <button class="btn btn-secondary" type="submit" onclick="revealFunction()">Reveal</button>
-        <hr>
-        <p id="reveal"></p>
-        <p id="score"></p>
+        <button class="btn btn-secondary" type="submit" onclick="revealFunction()">Reveal</button><p id="reveal"></p><h4 id="score"></h4>
         <p></p>
+      </div>
       </div>
 
 

@@ -116,6 +116,10 @@ def footballquiz(quizName):
 def about():
     return render_template('about.html')
 
+@app.route("/nc500")
+def nc500():
+    return render_template('nc500.html')
+
 @app.route("/blog")
 def blog():
     return render_template('blog.html')
@@ -140,6 +144,10 @@ def geography():
 def general():
     return render_template('general.html')
 
+@app.route("/counties")
+def counties():
+    return render_template('counties.html')
+
 @app.route("/highlands")
 def highlands():
     return render_template('highlands.html')
@@ -159,6 +167,10 @@ def history():
 @app.route("/culture")
 def culture():
     return render_template('culture.html')
+
+@app.route("/innerhebrides")
+def innerhebrides():
+    return render_template('innerhebrides.html')
 
 @app.route("/jumbo")
 def jumbo():

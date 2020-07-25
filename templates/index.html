@@ -19,7 +19,7 @@
       text-align: center;
     }
     .jumbotron {
-  background-image: url("https://farm8.staticflickr.com/7421/13787234775_0aeb271d27_b.jpg");
+  background-image: url("https://live.staticflickr.com/3814/32519858204_958923c5f4_b.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -30,11 +30,14 @@
 
 </style>
 
-<div class="jumbotron p-4 p-md-5 text-center text-white">
+<div class="jumbotron p-4 p-md-5">
   <div class="col-md-12 px-0">
-      <h1 class="display-4 font-italic">Hello Quizzer</h1>
-  <p class="lead my-3">Welcome to WeeQuiz, the home of Scottish Trivia</p>
   </div>
+</div>
+
+<div class="container text-center">
+  <h1 class="display-4 font-italic">Hello Quizzer</h1>
+  <p class="lead my-3">Welcome to <b>WeeQuiz</b>, the home of Scottish trivia. Whether you're after quizzes on <a href="{{ url_for('culture') }}">Scottish Culture</a> or <a href="{{ url_for('geography') }}">Scottish Geography</a>, the <a href="{{ url_for('counties') }}">Scottish Highlands</a> or <a href="{{ url_for('history') }}">Scottish History</a>, you'll find it all and more below. Don't know where to start? Try our beautiful interactive <a href="{{ url_for('counties') }}">Scottish Counties</a> quiz from the <a href="#featured">Featured Quizzes</a> section below.</p>
 </div>
 
 <div id="demo" class="carousel slide" data-ride="carousel">
@@ -131,14 +134,29 @@
 
 <hr>
 
-  <h1 class="display-5 text-center">Featured Quizzes</h1>
+<div class="container text-center">
+  <h1 class="display-5 text-center" id="featured">Featured Quizzes</h1>
+  <p>The pick of the bunch, try one of our Featured Quizzes.</p>
+</div>
 
     <!-- START THE FEATURETTES -->
 
     <hr class="featurette-divider">
     <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Scottish Counties. <span class="text-muted">Name them all.</span></h2>
+        <p class="lead">Roxburghshire need not apply.</p>
+      </div>
+      <div class="col-md-5">
+        <a href="{{ url_for('counties') }}" class="stretched-link btn-warning"></a>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="250" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><image href="https://www.svgrepo.com/show/155361/scotland.svg"></svg>
+      </div>
+    </div>
+    
+    <hr class="featurette-divider">
+    <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">Scotland 1978. <span class="text-muted">Name the XI.</span></h2>
+        <h2 class="featurette-heading">Scotland 1978 XI. <span class="text-muted">Difficulty: fiendish.</span></h2>
         <p class="lead">They beat the eventual winners, you know?</p>
       </div>
       <div class="col-md-5">
@@ -201,9 +219,25 @@
     </div>
 
     <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">NC500. <span class="text-muted">Towns.</span></h2>
+        <p class="lead">Can you name them?</p>
+      </div>
+      <div class="col-md-5">
+        <a href="{{ url_for('nc500') }}" class="stretched-link"></a>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="250" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><image href="https://www.svgrepo.com/show/78928/mountains.svg"></image></svg>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
     <!-- /END THE FEATURETTES -->
 
-<h1 class="display-6 text-center">New Quizzes</h1>
+<div class="container text-center">
+<h1 class="display-6">New Quizzes</h1>
+<p>We are always looking to add new quizzes. Have an idea? Then get in touch!</p>
+</div>
 
 
 <div class="row mb-2">

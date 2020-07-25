@@ -22,11 +22,14 @@
 
 </style>
 
-<div class="jumbotron p-4 p-md-5 text-white text-center rounded bg-dark">
+<div class="jumbotron p-4 p-md-5">
     <div class="col-md-12 px-0">
-        <h1 class="display-4 font-italic">Geography</h1>
-    <p class="lead my-3">Furthest Firth? Farthest Forth? Lake or Loch?</p>
     </div>
+  </div>
+
+  <div class="container text-center">
+    <h1 class="display-4 font-italic">Geography</h1>
+    <p class="lead my-3">Furthest Firth? Farthest Forth? Lake or Loch? Whether it's the glorious wilds of the Highlands, or the oft-missed southern Uplands, test your knowledge of Scotland's beautiful geography here. Don't know where to start? Try our <a href="#bridges">Scottish Bridges Quiz</a> or the fiendishly difficult <a href="#glens">Scottish Glens Quiz</a>.</p>
   </div>
 
   <div id="demo" class="carousel slide" data-ride="carousel">
@@ -126,7 +129,31 @@
 
     <!-- START THE FEATURETTES -->
 
+    <hr class="featurette-divider" id="bridges">
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Inner Hebrides. <span class="text-muted">Islands.</span></h2>
+        <p class="lead">Can you name them?</p>
+      </div>
+      <div class="col-md-5">
+        <a href="{{ url_for('innerhebrides') }}" class="stretched-link btn-warning"></a>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="250" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><image href="https://www.svgrepo.com/show/1147/ferry-front-view.svg"></svg>
+      </div>
+    </div>
+
     <hr class="featurette-divider">
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Scottish Counties. <span class="text-muted">Name them all.</span></h2>
+        <p class="lead">Roxburghshire need not apply.</p>
+      </div>
+      <div class="col-md-5">
+        <a href="{{ url_for('counties') }}" class="stretched-link btn-warning"></a>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="250" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><image href="https://www.svgrepo.com/show/155361/scotland.svg"></svg>
+      </div>
+    </div>
+
+    <hr class="featurette-divider" id="bridges">
     <div class="row featurette">
       <div class="col-md-7">
         <h2 class="featurette-heading">Bridges. <span class="text-muted">Picture Quiz.</span></h2>
@@ -138,7 +165,7 @@
       </div>
     </div>
 
-    <hr class="featurette-divider">
+    <hr class="featurette-divider" id="glens">
 
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
