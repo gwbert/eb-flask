@@ -1,0 +1,263 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+
+<style>
+    #quizbox {
+        border: solid;
+        border-width: 1px;
+    } 
+    #mapid { 
+      height: 1080px; 
+    }
+    .jumbotron{
+  margin-top: 20px;
+  background-image: url("https://live.staticflickr.com/65535/48359571107_83fa10c7bc_b.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 250px;
+}
+</style>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+   <script type="text/javascript" src="static/js/flotta.js"></script>
+   <script type="text/javascript" src="static/js/westray.js"></script>
+   <script type="text/javascript" src="static/js/papawestray.js"></script>
+   <script type="text/javascript" src="static/js/shapinsay.js"></script>
+   <script type="text/javascript" src="static/js/northronaldsay.js"></script>
+   <script type="text/javascript" src="static/js/sanday.js"></script>
+   <script type="text/javascript" src="static/js/rousay.js"></script>
+   <script type="text/javascript" src="static/js/eday.js"></script>
+   <script type="text/javascript" src="static/js/stronsay.js"></script>
+   <script type="text/javascript" src="static/js/mainland.js"></script>
+   <script type="text/javascript" src="static/js/southronaldsay.js"></script>
+   <script type="text/javascript" src="static/js/hoy.js"></script>
+   <script type="text/javascript" src="static/js/burray.js"></script>
+   <script type="text/javascript" src="static/js/wyre.js"></script>
+   <script type="text/javascript" src="static/js/egilsay.js"></script>
+   <script type="text/javascript" src="static/js/graemsay.js"></script>
+   <script type="text/javascript" src="static/js/auskerry.js"></script>
+   <script type="text/javascript" src="static/js/gairsay.js"></script>
+   <script type="text/javascript" src="static/js/holmofgrimbister.js"></script>
+   <script type="text/javascript" src="static/js/innerholm.js"></script>
+
+
+<main role="main" class="container text-center">
+  <div class="jumbotron">
+  </div>
+
+  <div class="container">
+    <h1>The Orkney Islands</h1>
+    <p class="lead">Can you name the 20 populated islands in the Orkney archipelago?</p>
+    <h3>Count: <span id="count"></span></h3>
+    <p></p>
+  </div>
+
+  <div class="container">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">Answers:</span>
+        </div>
+        <input type="text" id="myInput" oninput="myFunction()" class="form-control" placeholder="Enter your answers here" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+    </div>
+
+    <div id="mapid"></div>
+    <p></p>
+
+</div>
+
+<script>
+var map = L.map('mapid', {
+    center: [58.981679, -2.960275],
+    zoom: 9.8,
+    dragging: false,
+    minZoom: 9.8,
+    maxZoom: 9.8
+});
+
+var correct = {
+  "color": '#ff3399',
+  "fillOpacity": 1
+}
+
+L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain-background/{z}/{x}/{y}{r}.{ext}', {foo: 'bar', attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors', ext: 'png'}).addTo(map);
+
+var count = 0;
+
+function myFunction() {
+        var x = document.getElementById("myInput").value;
+        var x = x.toLowerCase();
+        if (x == "westray") {
+          L.geoJSON(westray, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "papa westray") {
+          L.geoJSON(papawestray, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "shapinsay") {
+          L.geoJSON(shapinsay, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "flotta") {
+          L.geoJSON(flotta, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "north ronaldsay") {
+          L.geoJSON(northronaldsay, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "sanday") {
+          L.geoJSON(sanday, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "rousay") {
+          L.geoJSON(rousay, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "eday") {
+          L.geoJSON(eday, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "stronsay") {
+          L.geoJSON(stronsay, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "mainland") {
+          L.geoJSON(mainland, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "south ronaldsay") {
+          L.geoJSON(southronaldsay, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "hoy") {
+          L.geoJSON(hoy, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "burray") {
+          L.geoJSON(burray, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "wyre") {
+          L.geoJSON(wyre, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "egilsay") {
+          L.geoJSON(egilsay, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "graemsay") {
+          L.geoJSON(graemsay, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "auskerry") {
+          L.geoJSON(auskerry, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "gairsay") {
+          L.geoJSON(gairsay, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "holm of grimbister") {
+          L.geoJSON(holmofgrimbister, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "inner holm") {
+          L.geoJSON(innerholm, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+    }
+
+</script>
+  
+
+
+{% endblock %}

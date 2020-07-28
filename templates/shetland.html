@@ -1,0 +1,226 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+
+<style>
+    #quizbox {
+        border: solid;
+        border-width: 1px;
+    } 
+    #mapid { 
+      height: 1080px; 
+    }
+    .jumbotron{
+  margin-top: 20px;
+  background-image: url("https://live.staticflickr.com/938/43898320692_5750ea26e6_b.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 250px;
+}
+</style>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+   <script type="text/javascript" src="static/js/shetlandmainland.js"></script>
+   <script type="text/javascript" src="static/js/whalsay.js"></script>
+   <script type="text/javascript" src="static/js/yell.js"></script>
+   <script type="text/javascript" src="static/js/westburra.js"></script>
+   <script type="text/javascript" src="static/js/unst.js"></script>
+   <script type="text/javascript" src="static/js/bressay.js"></script>
+   <script type="text/javascript" src="static/js/trondra.js"></script>
+   <script type="text/javascript" src="static/js/muckleroe.js"></script>
+   <script type="text/javascript" src="static/js/eastburra.js"></script>
+   <script type="text/javascript" src="static/js/fetlar.js"></script>
+   <script type="text/javascript" src="static/js/housay.js"></script>
+   <script type="text/javascript" src="static/js/foula.js"></script>
+   <script type="text/javascript" src="static/js/bruray.js"></script>
+   <script type="text/javascript" src="static/js/papastour.js"></script>
+   <script type="text/javascript" src="static/js/vaila.js"></script>
+
+
+<main role="main" class="container text-center">
+  <div class="jumbotron">
+  </div>
+
+  <div class="container">
+    <h1>The Shetland Islands</h1>
+    <p class="lead">Can you name the 16 populated islands in the Shetland archipelago?</p>
+    <h3>Count: <span id="count"></span></h3>
+    <p></p>
+  </div>
+
+  <div class="container">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">Answers:</span>
+        </div>
+        <input type="text" id="myInput" oninput="myFunction()" class="form-control" placeholder="Enter your answers here" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+    </div>
+
+    <div id="mapid"></div>
+    <p></p>
+
+</div>
+
+<script>
+var map = L.map('mapid', {
+    center: [60.349892, -1.266158],
+    zoom: 9.5,
+    dragging: false,
+    minZoom: 9.5,
+    maxZoom: 9.5
+});
+
+var correct = {
+  "color": '#ff3399',
+  "fillOpacity": 1
+}
+
+L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain-background/{z}/{x}/{y}{r}.{ext}', {foo: 'bar', attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors', ext: 'png'}).addTo(map);
+
+var count = 0;
+
+function myFunction() {
+        var x = document.getElementById("myInput").value;
+        var x = x.toLowerCase();
+        if (x == "mainland") {
+          L.geoJSON(mainland, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "whalsay") {
+          L.geoJSON(whalsay, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "yell") {
+          L.geoJSON(yell, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "west burra") {
+          L.geoJSON(westburra, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "unst") {
+          L.geoJSON(unst, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "bressay") {
+          L.geoJSON(bressay, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "trondra") {
+          L.geoJSON(trondra, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "muckle roe") {
+          L.geoJSON(muckleroe, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "east burra") {
+          L.geoJSON(eastburra, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "mainland") {
+          L.geoJSON(mainland, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "fetlar") {
+          L.geoJSON(fetlar, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "housay") {
+          L.geoJSON(housay, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "foula") {
+          L.geoJSON(foula, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "bruray") {
+          L.geoJSON(bruray, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "papa stour") {
+          L.geoJSON(papastour, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+        if (x == "vaila") {
+          L.geoJSON(vaila, {
+            style: correct
+          }).addTo(map);
+          document.getElementById("myInput").value = "";
+          count ++;
+          document.getElementById("count").innerText = count;
+        }
+    }
+
+</script>
+  
+
+
+{% endblock %}

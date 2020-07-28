@@ -160,6 +160,10 @@ def mountains():
 def people():
     return render_template('people.html')
 
+@app.route("/compasspointmunros")
+def compasspointmunros():
+    return render_template('compasspointmunros.html')
+
 @app.route("/history")
 def history():
     return render_template('history.html')
@@ -167,6 +171,14 @@ def history():
 @app.route("/culture")
 def culture():
     return render_template('culture.html')
+
+@app.route("/orkney")
+def orkney():
+    return render_template('orkney.html')
+
+@app.route("/shetland")
+def shetland():
+    return render_template('shetland.html')
 
 @app.route("/innerhebrides")
 def innerhebrides():

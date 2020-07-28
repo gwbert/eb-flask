@@ -37,7 +37,7 @@
 
 <div class="container text-center">
   <h1 class="display-4 font-italic">Hello Quizzer</h1>
-  <p class="lead my-3">Welcome to <b>WeeQuiz</b>, the home of Scottish trivia. Whether you're after quizzes on <a href="{{ url_for('culture') }}">Scottish Culture</a> or <a href="{{ url_for('geography') }}">Scottish Geography</a>, the <a href="{{ url_for('counties') }}">Scottish Highlands</a> or <a href="{{ url_for('history') }}">Scottish History</a>, you'll find it all and more below. Don't know where to start? Try our beautiful interactive <a href="{{ url_for('counties') }}">Scottish Counties</a> quiz from the <a href="#featured">Featured Quizzes</a> section below.</p>
+  <p class="lead my-3">Welcome to <b>WeeQuiz</b>, the home of Scottish trivia. Whether you're after quizzes on <a href="{{ url_for('culture') }}">Scottish Culture</a> or <a href="{{ url_for('geography') }}">Scottish Geography</a>, the <a href="{{ url_for('counties') }}">Scottish Highlands</a> or <a href="{{ url_for('history') }}">Scottish History</a>, you'll find it all and more below. Don't know where to start? Try our beautiful interactive <a href="{{ url_for('counties') }}">Scottish Counties Quiz</a> from the <a href="#featured">Featured Quizzes</a> section below.</p>
 </div>
 
 <div id="demo" class="carousel slide" data-ride="carousel">
@@ -143,6 +143,18 @@
 
     <hr class="featurette-divider">
     <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">The Orkneys. <span class="text-muted">Populated Islands.</span></h2>
+        <p class="lead">Can you name all 20?</p>
+      </div>
+      <div class="col-md-5">
+        <a href="{{ url_for('orkney') }}" class="stretched-link btn-warning"></a>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="250" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><image href="https://www.svgrepo.com/show/276870/viking-ship-vessel.svg"></svg>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+    <div class="row featurette">
       <div class="col-md-7 order-md-2">
         <h2 class="featurette-heading">Scottish Counties. <span class="text-muted">Name them all.</span></h2>
         <p class="lead">Roxburghshire need not apply.</p>
@@ -228,6 +240,32 @@
       <div class="col-md-5">
         <a href="{{ url_for('nc500') }}" class="stretched-link"></a>
         <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="250" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><image href="https://www.svgrepo.com/show/78928/mountains.svg"></image></svg>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Compass Point. <span class="text-muted">Munros.</span></h2>
+        <p class="lead">Can you name them?</p>
+      </div>
+      <div class="col-md-5">
+        <a href="{{ url_for('compasspointmunros') }}" class="stretched-link"></a>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="250" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><image href="https://www.svgrepo.com/show/263110/mountain.svg"></image></svg>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Shetland. <span class="text-muted">Populated Islands.</span></h2>
+        <p class="lead">Can you name them all?</p>
+      </div>
+      <div class="col-md-5">
+        <a href="{{ url_for('shetland') }}" class="stretched-link"></a>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="250" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><image href="https://www.svgrepo.com/show/224576/viking-ship-vessel.svg"></image></svg>
       </div>
     </div>
 

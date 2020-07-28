@@ -12,7 +12,7 @@
     }
     .jumbotron{
   margin-top: 20px;
-  background-image: url("https://live.staticflickr.com/65535/49381349016_760022f824_b.jpg");
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/32/Cairngorms_National_Park_road_%28Unsplash%29.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -32,9 +32,9 @@
   </div>
 
   <div class="container">
-    <h1>NC500</h1>
-    <p class="lead">Can you identify these 10 towns on the NC500 route?</p>
-    <h3 id="count">0</h3>
+    <h1>Compass Point Munros</h1>
+    <p class="lead">Can you name the most easterly, westerly, southernmost and northernmost munros?</p>
+    <h3>Count: <span id="count"></span></h3>
     <p></p>
   </div>
 
@@ -54,25 +54,19 @@
 
 <script>
 var map = L.map('mapid', {
-    center: [58.024044, -4.402478],
-    zoom: 9,
+    center: [57.143194, -4.680661],
+    zoom: 8,
     dragging: false,
-    minZoom: 9,
-    maxZoom: 9
+    minZoom: 8,
+    maxZoom: 8
 });
 
 L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain-background/{z}/{x}/{y}{r}.{ext}', {foo: 'bar', attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors', ext: 'png'}).addTo(map);
 
-var inverness = L.marker([57.475567, -4.226235]).addTo(map);
-var tain = L.marker([57.811782, -4.056697]).addTo(map);
-var brora = L.marker([58.010771, -3.853135]).addTo(map);
-var thurso = L.marker([58.595423, -3.524336]).addTo(map);
-var tongue = L.marker([58.478391, -4.417991]).addTo(map);
-var drumbeg = L.marker([58.242826, -5.201195]).addTo(map);
-var ullapool = L.marker([57.900383, -5.165596]).addTo(map);
-var poolewe = L.marker([57.758004, -5.615587]).addTo(map);
-var wick = L.marker([58.438173, -3.089302]).addTo(map);
-var lochcarron = L.marker([57.388093, -5.567394]).addTo(map);
+var benHope = L.marker([58.413552, -4.608741]).addTo(map);
+var mountKeen = L.marker([56.969523, -2.973696]).addTo(map);
+var benMore = L.marker([56.424107, -6.015201]).addTo(map);
+var benLomond = L.marker([56.190631, -4.633167]).addTo(map);
 
 var new_popup = L.popup({"autoClose": false, "closeOnClick": null});
 
@@ -81,62 +75,26 @@ var count = 0;
 function myFunction() {
         var x = document.getElementById("myInput").value;
         var x = x.toLowerCase();
-        if (x == "inverness") {
-          inverness.bindTooltip('Inverness').openTooltip();
+        if (x == "ben hope") {
+          benHope.bindTooltip('Ben Hope').openTooltip();
           document.getElementById("myInput").value = "";
           count ++;
           document.getElementById("count").innerText = count;
         }
-        if (x == "tain") {
-          tain.bindTooltip('Tain').openTooltip();  
+        if (x == "mount keen") {
+          mountKeen.bindTooltip('Mount Keen').openTooltip();  
           document.getElementById("myInput").value = "";
           count ++;
           document.getElementById("count").innerText = count;
         }
-        if (x == "brora") {
-          brora.bindTooltip('Brora').openTooltip();
+        if (x == "ben more") {
+          benMore.bindTooltip('Ben More').openTooltip();
           document.getElementById("myInput").value = "";
           count ++;
           document.getElementById("count").innerText = count;
         }
-        if (x == "thurso") {
-          thurso.bindTooltip('Thurso').openTooltip();
-          document.getElementById("myInput").value = "";
-          count ++;
-          document.getElementById("count").innerText = count;
-        }
-        if (x == "tongue") {
-          tongue.bindTooltip('Tongue').openTooltip();
-          document.getElementById("myInput").value = "";
-          count ++;
-          document.getElementById("count").innerText = count;
-        }
-        if (x == "drumbeg") {
-          drumbeg.bindTooltip('Drumbeg').openTooltip();
-          document.getElementById("myInput").value = "";
-          count ++;
-          document.getElementById("count").innerText = count;
-        }
-        if (x == "ullapool") {
-          ullapool.bindTooltip('Ullapool').openTooltip();
-          document.getElementById("myInput").value = "";
-          count ++;
-          document.getElementById("count").innerText = count;
-        }
-        if (x == "poolewe") {
-          poolewe.bindTooltip('Poolewe').openTooltip();
-          document.getElementById("myInput").value = "";
-          count ++;
-          document.getElementById("count").innerText = count;
-        }
-        if (x == "lochcarron") {
-          lochcarron.bindTooltip('Lochcarron').openTooltip();
-          document.getElementById("myInput").value = "";
-          count ++;
-          document.getElementById("count").innerText = count;
-        }
-        if (x == "wick") {
-          wick.bindTooltip('Wick').openTooltip();
+        if (x == "ben lomond") {
+          benLomond.bindTooltip('Ben Lomond').openTooltip();
           document.getElementById("myInput").value = "";
           count ++;
           document.getElementById("count").innerText = count;
