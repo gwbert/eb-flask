@@ -124,6 +124,12 @@ def nc500():
 def blog():
     return render_template('blog.html')
 
+@app.route("/blogentry/<blogName>")
+def blogentry(blogName):
+    import blog
+    myObject = getattr(blog, blogName)
+    return render_template('blogentry.html', myObject=myObject)
+
 @app.route("/sport")
 def sport():
     return render_template('sport.html')

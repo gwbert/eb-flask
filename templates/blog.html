@@ -1,9 +1,70 @@
 {% extends "base.html" %}
 {% block content %}
 
+<style>
+    #credit {
+        font-size: small;
+    }
+</style>
+
+<!-- Custom styles for this template -->
+<link href="https://getbootstrap.com/docs/4.5/examples/carousel/carousel.css" rel="stylesheet">
+
+<div class="container">
+  
 <div class="container text-center">
-  <h1 class="mt-5">Blog</h1>
-  <p class="lead">Coming soon</p>
+    <h1 class="mt-5">Discover Scotland Blog</h1>
+</div>
+
+ <!-- START THE FEATURETTES -->
+
+ <hr class="featurette-divider">
+
+
+ <div class="row featurette">
+  <div class="col-md-7">
+    <h2 class="featurette-heading">Edinburgh:<span class="text-muted"> Scotland's capital.</span></h2>
+    <p class="lead">Edinburgh, Scotland's capital since the 15th Century, is a historical masterpiece visited by millions of tourists every year. The second most populous city in Scotland after Glasgow, it is the seventh most populous city in the UK and home to Scotland's futuristic Parliament building.</p>
+    <a href="{{ url_for('blogentry', blogName='capitalCity') }}"><button type="button" class="btn btn-outline-primary">Continue reading</button></a>
+   </div>
+  <div class="col-md-5">
+   <img src="https://live.staticflickr.com/4328/35929876352_6835aca4fa_b.jpg" alt="edinburgh, scotland's capital" class="img-fluid" width="500" height="500">
+ <p class="text-muted" id="credit"></p>    
+ </div>
+ </div>
+
+ <hr class="featurette-divider">
+
+ <div class="row featurette">
+  <div class="col-md-7 order-md-2">
+    <h2 class="featurette-heading">Floors Castle:<span class="text-muted"> Kelso.</span></h2>
+    <p class="lead">Floors Castle, situated in Kelso, Roxburghshire is the largest inhabited castle in Scotland. Dominating Kelso and the surrounding farmland, this castle is a stunning symmetrical tourist attraction. With far-reaching views towards the Cheviots and fully-open to the public...</p>
+    <a href="{{ url_for('blogentry', blogName='biggestCastle') }}"><button type="button" class="btn btn-outline-primary">Continue reading</button></a>
+   </div>
+  <div class="col-md-5">
+   <img src="https://live.staticflickr.com/8014/7187351723_4d698cf247_b.jpg" alt="scotland's largest castle" class="img-fluid" width="500" height="500">
+<p class="text-muted" id="credit"></p>    
+</div>
+</div>
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+ <div class="col-md-7">
+   <h2 class="featurette-heading">Ben Nevis:<span class="text-muted"> Fort William.</span></h2>
+   <p class="lead">Ben Nevis, located near Fort William in the Scottish Highlands, is the UK's (and Scotland's) highest mountain. Coming in at 1,345m (or 4,412ft) Ben Nevis attracts more than 100,000 walkers a year, most taking the easier Mountain Track route rather than the more advanced Carn Mor Dearg Arete route...</p>
+   <a href="{{ url_for('blogentry', blogName='highestMountain') }}"><button type="button" class="btn btn-outline-primary">Continue reading</button></a>
+  </div>
+ <div class="col-md-5">
+  <img src="https://live.staticflickr.com/1909/44251180975_fc4286b18b_b.jpg" alt="scotland's highest mountain" class="img-fluid" width="500" height="500">
+<p class="text-muted" id="credit"></p>    
+</div>
+</div>
+
+
+ <!-- /END THE FEATURETTES -->
+
+
 </div>
 
 {% endblock %}
