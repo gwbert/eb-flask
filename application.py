@@ -158,10 +158,6 @@ def counties():
 def highlands():
     return render_template('highlands.html')
 
-@app.route("/mountains")
-def mountains():
-    return render_template('mountains.html')
-
 @app.route("/compasspointmunros")
 def compasspointmunros():
     return render_template('compasspointmunros.html')
