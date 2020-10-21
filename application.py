@@ -162,10 +162,6 @@ def highlands():
 def mountains():
     return render_template('mountains.html')
 
-@app.route("/people")
-def people():
-    return render_template('people.html')
-
 @app.route("/compasspointmunros")
 def compasspointmunros():
     return render_template('compasspointmunros.html')

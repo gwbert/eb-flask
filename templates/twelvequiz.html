@@ -9,7 +9,7 @@
       border-width: 1px;
   } 
   .jumbotron {
-    background-image: url("https://farm8.staticflickr.com/7421/13787234775_0aeb271d27_b.jpg");
+    background-image: url("https://images.unsplash.com/photo-1515876305430-f06edab8282a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -21,13 +21,11 @@
 
 
 <div class="jumbotron p-4 p-md-5 text-white text-center rounded bg-dark">
-<h1 class="display-4 font-italic">12 Question Quiz:</h1>
-<h1 class="display-4 font-italic">{{ myObject.headline }}</h1>
+</div>
 
-</div>
-</div>
 <div class="container text-center">
-<p class="lead my-3">{{ myObject.byline }}</p>
+    <h1 class="display-4 font-italic">{{ myObject.headline }}</h1>
+    <p class="lead my-3">{{ myObject.byline }}</p>
 </div>
 
 <div class="container">
@@ -41,6 +39,7 @@
 <hr>
 
 <div class="container" id="quizbox">
+    <p></p>
 
   <div class="row">
         <div class="col">
@@ -100,9 +99,11 @@
         <input type="text" class="form-control" id="q12">
     </div>
 </div>
+<p></p>
 
-
-<button class="btn btn-secondary" type="submit" onclick="revealFunction()">Reveal</button>
+<div class="container text-center">
+<button class="btn btn-outline-secondary" type="submit" onclick="revealFunction()">Reveal</button>
+</div>
 
 <hr>
 
