@@ -47,6 +47,12 @@
 
 <div id="demo" class="carousel slide" data-ride="carousel">
 
+  <div class="container text-center">
+    <h1 class="display-5 text-center" id="featured">Quiz Carousel</h1>
+    <p>Try a random quiz from our Quiz Carousel.</p>
+  </div>
+
+
   <!-- Indicators -->
   <ul class="carousel-indicators">
     <li data-target="#demo" data-slide-to="0" class="active"></li>
@@ -58,73 +64,124 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
       <div class="row mb-2">
-          <div class="col-md-6">
-            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-              <div class="col p-4 d-flex flex-column position-static">
-                <strong class="d-inline-block mb-2">Islands</strong>
-                <h3 class="mb-0">Island Capitals</h3>
-                <p class="card-text mb-auto">The Skye's the limit in our Island Capitals quiz</p>
-                <a href="{{ url_for('smallquiz', quizName='islandCapitals') }}" class="stretched-link btn-primary">Take the quiz</a>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <a href="{{ url_for('smallquiz', quizName='generalKnowledge') }}"><p class="card-text text-center btn-outline btn-lg">General Knowledge</p></a>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                </div>
               </div>
             </div>
+            <img class="img-fluid img-thumbnail" src="https://images.unsplash.com/photo-1573558098539-394235f962b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="edinburgh cityscape" width="100%" height="225">
           </div>
-          <div class="col-md-6">
-            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-              <div class="col p-4 d-flex flex-column position-static">
-                <strong class="d-inline-block mb-2">Mountains</strong>
-                <h3 class="mb-0">Ski Areas</h3>
-                <p class="mb-auto">Can you guess them by height?</p>
-                <a href="{{ url_for('smallquiz', quizName='skiAreaHeights') }}" class="stretched-link btn-success">Take the quiz</a>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <a href="{{ url_for('picturequiz3', quizName='generalGlasgow') }}"><p class="card-text text-center btn-outline btn-lg">Glasgow Landmarks</p></a>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                </div>
               </div>
             </div>
+            <img class="img-fluid img-thumbnail" src="https://images.unsplash.com/photo-1471258497973-fdbc1f0c0b1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="glasgow smartie bridge" width="100%" height="225">
           </div>
-        </div>      </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <a href="{{ url_for('mediumquiz', quizName='famousScots') }}"><p class="card-text text-center btn-outline btn-lg">Famous Scots</p></a>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                </div>
+              </div>
+            </div>
+            <img class="img-fluid img-thumbnail" src="https://images.unsplash.com/photo-1517081719774-67c8f09db5b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="glenfinnan viaduct" width="100%" height="225">
+          </div>
+        </div>
+        </div>      
+      </div>
     <div class="carousel-item">
       <div class="row mb-2">
-          <div class="col-md-6">
-            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-              <div class="col p-4 d-flex flex-column position-static">
-                <strong class="d-inline-block mb-2">Geography</strong>
-                <h3 class="mb-0">Longest, Highest, Deepest</h3>
-                <p class="card-text mb-auto">Ness or Lomond? Tay or Dee?</p>
-                <a href="{{ url_for('smallquiz', quizName='longestDeepest') }}" class="stretched-link btn-info">Take the quiz</a>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <a href="{{ url_for('mediumquiz', quizName='scottishFilms') }}"><p class="card-text text-center btn-outline btn-lg">Scottish Films</p></a>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                </div>
               </div>
             </div>
+            <img class="img-fluid img-thumbnail" src="https://images.unsplash.com/photo-1559430789-dcc105baa609?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80" alt="rannoch moor" width="100%" height="225">
           </div>
-          <div class="col-md-6">
-            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-              <div class="col p-4 d-flex flex-column position-static">
-                <strong class="d-inline-block mb-2">History</strong>
-                <h3 class="mb-0">Battles</h3>
-                <p class="mb-auto">Starts easy, gets harder</p>
-                <a href="{{ url_for('smallquiz', quizName='battles') }}" class="stretched-link btn-warning">Take the quiz</a>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <a href="{{ url_for('picturequiz3', quizName='nameTheCity') }}"><p class="card-text text-center btn-outline btn-lg">Name the city</p></a>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                </div>
               </div>
             </div>
+            <img class="img-fluid img-thumbnail" src="https://images.unsplash.com/photo-1563892986328-e7478be5ed65?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="dundee" width="100%" height="225">
           </div>
-        </div>      </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <a href="{{ url_for('picturequiz3', quizName='hebrideanIslands') }}"><p class="card-text text-center btn-outline btn-lg">Outer Hebrides</p></a>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                </div>
+              </div>
+            </div>
+            <img class="img-fluid img-thumbnail" src="https://images.unsplash.com/photo-1469535933002-df571c1c6713?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="hebridean island" width="100%" height="225">
+          </div>
+        </div>
+        </div>      
+      </div>
     <div class="carousel-item">
       <div class="row mb-2">
-          <div class="col-md-6">
-            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-              <div class="col p-4 d-flex flex-column position-static">
-                <strong class="d-inline-block mb-2">Music</strong>
-                <h3 class="mb-0">Band by first album</h3>
-                <p class="card-text mb-auto">Challenging</p>
-                <a href="{{ url_for('smallquiz', quizName='bandByAlbum') }}" class="stretched-link btn-dark">Take the quiz</a>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <a href="{{ url_for('mediumquiz', quizName='vikingScotland') }}"><p class="card-text text-center btn-outline btn-lg">Viking Scotland</p></a>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                </div>
               </div>
             </div>
+            <img class="img-fluid img-thumbnail" src="https://images.unsplash.com/photo-1567108077905-f8a10e69a5a6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="viking" width="100%" height="225">
           </div>
-          <div class="col-md-6">
-            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-              <div class="col p-4 d-flex flex-column position-static">
-                <strong class="d-inline-block mb-2">General</strong>
-                <h3 class="mb-0">General Knowledge</h3>
-                <p class="mb-auto">Scottish basics</p>
-                <a href="{{ url_for('smallquiz', quizName='generalKnowledge') }}" class="stretched-link btn-primary">Take the quiz</a>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <a href="{{ url_for('smallquiz', quizName='fiveActors') }}"><p class="card-text text-center btn-outline btn-lg">Guess the actor</p></a>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                </div>
               </div>
             </div>
+            <img class="img-fluid img-thumbnail" src="https://images.unsplash.com/photo-1535534234806-58f031487e33?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="warrior photo" width="100%" height="225">
           </div>
-        </div>      </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <a href="{{ url_for('smallquiz', quizName='nameTheBand') }}"><p class="card-text text-center btn-outline btn-lg">Name the band</p></a>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                </div>
+              </div>
+            </div>
+            <img class="img-fluid img-thumbnail" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="music photo" width="100%" height="225">
+          </div>
+        </div>
+        </div>      
+      </div>
   </div>
 
   <!-- Left and right controls -->
@@ -135,6 +192,12 @@
     <span class="carousel-control-next-icon"></span>
   </a>
 
+</div>
+
+<div class="container text-center">
+  <h1 class="display-6">Scottish photo of the day</h1>
+  <p class="lead">{{ tagline }}</p>
+  <img class="img-fluid img-thumbnail" src="{{ image }}">
 </div>
 
 <hr>
@@ -411,5 +474,17 @@
     </div>
   </div>
 </div> 
+
+
+<p></p>
+
+<div class="container text-center">
+
+  <p class="lead"><b>Did you know?</b></p>
+  <p class="lead">The Union of the Crowns in 1603 saw the accession of James VI of Scotland to to thrones of England & Ireland, uniting the three realms under a single monarch. A century later in 1707 The Union of Parliaments (combining the Union with Scotland Act 1706 & the Union with England Act 1707) saw the Kingdom of England & the Kingdom of Scotland become <i>"united into One Kingdom by the name of Great Britain"</i>.</p>
+
+</div>
+
+<p></p>
 
 {% endblock %}

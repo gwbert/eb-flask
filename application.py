@@ -14,7 +14,13 @@ bootstrap = Bootstrap(app)
 @app.route("/")
 @app.route("/index")
 def index():
-    return render_template('index.html')
+    import potd
+    import random
+    length = len(potd.image)
+    number = random.randrange(0, length)
+    image = potd.image[number]
+    tagline = potd.tagline[number]
+    return render_template('index.html', image=image, tagline=tagline)
 
 @app.route("/quiz/<quizName>")
 def quiz(quizName):
