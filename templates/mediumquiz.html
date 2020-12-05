@@ -9,10 +9,6 @@
 
 
 <style>
-  #quizbox {
-      border: solid;
-      border-width: 1px;
-  } 
   .jumbotron {
     background-image: url("https://images.unsplash.com/photo-1526331002218-f8d20c09f649?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
     background-size: cover;
@@ -33,127 +29,149 @@
   <p class="lead my-3">{{ myObject.byline }}</p>
 </div>
 
+<hr>
+
 <div class="container" id="quizbox">
 <form>
   <div class="form-group row">
-    <label for="question" class="col-sm-2 col-form-label font-weight-bold">Q.1</label>
+    <div class="col 2"></div>
     <div class="col-sm-10">
-      <input type="text" readonly class="form-control-plaintext" id="question" value="{{ myObject.questions[0] }}">
+      <p class="lead" id="question">{{ myObject.questions[0] }}</p>
     </div>
+    <div class="col 2"></div>
   </div>
   <div class="form-group row">
-    <label for="answer" class="col-sm-2 col-form-label font-weight-bold">Answer</label>
+    <div class="col 2"></div>
     <div class="col-sm-10">
       <input type="text" class="form-control" id="q1">
   </div>
+  <div class="col 2"></div>
       </div>
       <div class="form-group row">
-          <label for="question" class="col-sm-2 col-form-label font-weight-bold">Q.2</label>
+        <div class="col 2"></div>
           <div class="col-sm-10">
-            <input type="text" readonly class="form-control-plaintext" id="question" value="{{ myObject.questions[1] }}">
+            <p class="lead" id="question">{{ myObject.questions[1] }}</p>
           </div>
+          <div class="col 2"></div>
         </div>
         <div class="form-group row">
-          <label for="answer" class="col-sm-2 col-form-label font-weight-bold">Answer</label>
+          <div class="col 2"></div>
           <div class="col-sm-10">
             <input type="text" class="form-control" id="q2">
         </div>
+        <div class="col 2"></div>
             </div>
             <div class="form-group row">
-              <label for="question" class="col-sm-2 col-form-label font-weight-bold">Q.3</label>
+              <div class="col 2"></div>
               <div class="col-sm-10">
-                <input type="text" readonly class="form-control-plaintext" id="question" value="{{ myObject.questions[2] }}">
+                <p class="lead" id="question">{{ myObject.questions[2] }}</p>
               </div>
+              <div class="col 2"></div>
             </div>
             <div class="form-group row">
-              <label for="answer" class="col-sm-2 col-form-label font-weight-bold">Answer</label>
+              <div class="col 2"></div>
               <div class="col-sm-10">
                 <input type="text" class="form-control" id="q3">
             </div>
+            <div class="col 2"></div>
                 </div>
                 <div class="form-group row">
-                  <label for="question" class="col-sm-2 col-form-label font-weight-bold">Q.4</label>
+                  <div class="col 2"></div>
                   <div class="col-sm-10">
-                    <input type="text" readonly class="form-control-plaintext" id="question" value="{{ myObject.questions[3] }}">
+                    <p class="lead" id="question">{{ myObject.questions[3] }}</p>
                   </div>
+                  <div class="col 2"></div>
                 </div>
                 <div class="form-group row">
-                  <label for="answer" class="col-sm-2 col-form-label font-weight-bold">Answer</label>
+                  <div class="col 2"></div>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" id="q4">
                 </div>
+                <div class="col 2"></div>
                     </div>
                     <div class="form-group row">
-                      <label for="question" class="col-sm-2 col-form-label font-weight-bold">Q.5</label>
+                      <div class="col 2"></div>
                       <div class="col-sm-10">
-                        <input type="text" readonly class="form-control-plaintext" id="question" value="{{ myObject.questions[4] }}">
+                        <p class="lead" id="question">{{ myObject.questions[4] }}</p>
                       </div>
+                      <div class="col 2"></div>
                     </div>
                     <div class="form-group row">
-                      <label for="answer" class="col-sm-2 col-form-label font-weight-bold">Answer</label>
+                      <div class="col 2"></div>
                       <div class="col-sm-10">
                         <input type="text" class="form-control" id="q5">
                     </div>
+                    <div class="col 2"></div>
                         </div>
                         <div class="form-group row">
-                          <label for="question" class="col-sm-2 col-form-label font-weight-bold">Q.6</label>
+                          <div class="col 2"></div>
                           <div class="col-sm-10">
-                            <input type="text" readonly class="form-control-plaintext" id="question" value="{{ myObject.questions[5] }}">
+                            <p class="lead" id="question">{{ myObject.questions[5] }}</p>
                           </div>
+                          <div class="col 2"></div>
                         </div>
                         <div class="form-group row">
-                          <label for="answer" class="col-sm-2 col-form-label font-weight-bold">Answer</label>
+                          <div class="col 2"></div>
                           <div class="col-sm-10">
                             <input type="text" class="form-control" id="q6">
                         </div>
+                        <div class="col 2"></div>
                             </div>
                             <div class="form-group row">
-                              <label for="question" class="col-sm-2 col-form-label font-weight-bold">Q.7</label>
+                              <div class="col 2"></div>
                               <div class="col-sm-10">
-                                <input type="text" readonly class="form-control-plaintext" id="question" value="{{ myObject.questions[6] }}">
+                                <p class="lead" id="question">{{ myObject.questions[6] }}</p>
                               </div>
+                              <div class="col 2"></div>
                             </div>
                             <div class="form-group row">
-                              <label for="answer" class="col-sm-2 col-form-label font-weight-bold">Answer</label>
+                              <div class="col 2"></div>
                               <div class="col-sm-10">
                                 <input type="text" class="form-control" id="q7">
                             </div>
+                            <div class="col 2"></div>
                                 </div>
                                 <div class="form-group row">
-                                  <label for="question" class="col-sm-2 col-form-label font-weight-bold">Q.8</label>
+                                  <div class="col 2"></div>
                                   <div class="col-sm-10">
-                                    <input type="text" readonly class="form-control-plaintext" id="question" value="{{ myObject.questions[7] }}">
+                                    <p class="lead" id="question">{{ myObject.questions[7] }}</p>
                                   </div>
+                                  <div class="col 2"></div>
                                 </div>
                                 <div class="form-group row">
-                                  <label for="answer" class="col-sm-2 col-form-label font-weight-bold">Answer</label>
+                                  <div class="col 2"></div>
                                   <div class="col-sm-10">
                                     <input type="text" class="form-control" id="q8">
                                 </div>
+                                <div class="col 2"></div>
                                     </div>
                                     <div class="form-group row">
-                                      <label for="question" class="col-sm-2 col-form-label font-weight-bold">Q.9</label>
+                                      <div class="col 2"></div>
                                       <div class="col-sm-10">
-                                        <input type="text" readonly class="form-control-plaintext" id="question" value="{{ myObject.questions[8] }}">
+                                        <p class="lead" id="question">{{ myObject.questions[8] }}</p>
                                       </div>
+                                      <div class="col 2"></div>
                                     </div>
                                     <div class="form-group row">
-                                      <label for="answer" class="col-sm-2 col-form-label font-weight-bold">Answer</label>
+                                      <div class="col 2"></div>
                                       <div class="col-sm-10">
                                         <input type="text" class="form-control" id="q9">
                                     </div>
+                                    <div class="col 2"></div>
                                         </div>
                                         <div class="form-group row">
-                                          <label for="question" class="col-sm-2 col-form-label font-weight-bold">Q.10</label>
+                                          <div class="col 2"></div>
                                           <div class="col-sm-10">
-                                            <input type="text" readonly class="form-control-plaintext" id="question" value="{{ myObject.questions[9] }}">
+                                            <p class="lead" id="question">{{ myObject.questions[9] }}</p>
                                           </div>
+                                          <div class="col 2"></div>
                                         </div>
                                         <div class="form-group row">
-                                          <label for="answer" class="col-sm-2 col-form-label font-weight-bold">Answer</label>
+                                          <div class="col 2"></div>
                                           <div class="col-sm-10">
                                             <input type="text" class="form-control" id="q10">
                                         </div>
+                                        <div class="col 2"></div>
                                             </div>
 
 </form>
